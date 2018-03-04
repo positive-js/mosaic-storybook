@@ -4,7 +4,7 @@ import { setOptions } from '@storybook/addon-options';
 import { withKnobs } from '@storybook/addon-knobs/angular';
 
 setOptions({
-  name: 'Angular Material'
+  name: 'Mosaic'
 });
 
 addDecorator(withKnobs);
