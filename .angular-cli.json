@@ -19,6 +19,7 @@
           "testTsconfig": "tsconfig.spec.json",
           "prefix": "app",
           "styles": [
+              "../node_modules/@ptsecurity/mosaic/prebuilt-themes/default-theme.css"
           ],
           "scripts": [],
           "environmentSource": "environments/environment.ts",

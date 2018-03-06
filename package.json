@@ -18,7 +18,7 @@
         "@angular/platform-browser": "^5.2.0",
         "@angular/platform-browser-dynamic": "^5.2.0",
         "@angular/router": "^5.2.0",
-        "@ptsecurity/mosaic": "github:positive-js/mosaic-builds",
+        "@ptsecurity/mosaic": "git+https://github.com/positive-js/mosaic-builds.git",
         "core-js": "^2.4.1",
         "rxjs": "^5.5.6",
         "zone.js": "^0.8.19"
@@ -27,7 +27,7 @@
         "@angular/cli": "~1.7.2",
         "@angular/compiler-cli": "^5.2.0",
         "@angular/language-service": "^5.2.0",
-        "@ptsecurity/cdk": "github:positive-js/cdk-builds",
+        "@ptsecurity/cdk": "git+https://github.com/positive-js/cdk-builds.git",
         "@storybook/addon-actions": "^3.4.0-alpha.9",
         "@storybook/addon-knobs": "^3.4.0-alpha.9",
         "@storybook/addon-links": "^3.4.0-alpha.9",
