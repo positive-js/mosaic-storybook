@@ -1,0 +1,62 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "mosaic-storybook": {
+      "root": "",
+      "sourceRoot": "src",
+      "projectType": "application",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist",
+            "tsConfig": "tsconfig.json",
+            "assets": [
+            ],
+            "styles": [
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "prod": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "mosaic-storybook:build"
+          },
+          "configurations": {
+            "prod": {
+              "browserTarget": "mosaic-storybook:build:prod"
+            }
+          }
+        }
+      }
+    },
+    "mosaic-storybook-e2e": {
+      "root": "",
+      "sourceRoot": "",
+      "projectType": "application"
+    }
+  },
+  "defaultProject": "mosaic-storybook",
+  "schematics": {
+    "@schematics/angular:component": {
+      "prefix": "app",
+      "styleext": "css"
+    },
+    "@schematics/angular:directive": {
+      "prefix": "app"
+    }
+  }
+}
