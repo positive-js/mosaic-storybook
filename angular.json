@@ -5,7 +5,7 @@
   "projects": {
     "mosaic-storybook": {
       "root": "",
-      "sourceRoot": "src",
+      "sourceRoot": "",
       "projectType": "application",
       "architect": {
         "build": {
@@ -42,11 +42,6 @@
           }
         }
       }
-    },
-    "mosaic-storybook-e2e": {
-      "root": "",
-      "sourceRoot": "",
-      "projectType": "application"
     }
   },
   "defaultProject": "mosaic-storybook",
