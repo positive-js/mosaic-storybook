@@ -5,7 +5,18 @@ import { McRadioModule } from '@ptsecurity/mosaic';
 
 storiesOf('Radio', module)
     .add('radio group', () => ({
+        /* tslint:disable:no-trailing-whitespace */
         template: `
+            <style>
+                .example-radio-group {
+                    display: inline-flex;
+                    flex-direction: column;
+                }
+                
+                .example-radio-button {
+                    margin-bottom: 8px;
+                }
+            </style>
             <div>
                 <mc-radio-group
                     class="example-radio-group"
@@ -18,6 +29,7 @@ storiesOf('Radio', module)
                 <br><br>
             </div>
         `,
+        /* tslint:enable:no-trailing-whitespace */
         props: {
 
         },
