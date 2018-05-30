@@ -1,12 +1,10 @@
-# Mosaic Storybook
+# Storybook for Mosaic
+Repo showing off [Mosaic](https://github.com/positive-js/mosaic) components in [Storybook](https://storybook.js.org/).
 
+## Local Setup
 
-
-## Development server
-
-Run `start` for a dev server. Navigate to `http://localhost:4300/`.
-The app will automatically reload if you change any of the source files.
-
-## Demo
-
-https://positive-js.github.io/mosaic-storybook/
+```
+$ npm install
+$ npm start
+```
+Open [http://localhost:4300](http://localhost:4300)

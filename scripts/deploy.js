@@ -1,6 +1,6 @@
-import { publish } from 'gh-pages';
-
 const path = require('path');
+
+const { publish } = require('gh-pages');
 
 const dir = path.resolve(path.join(__dirname, '../', 'storybook-static'));
 publish(dir, {
