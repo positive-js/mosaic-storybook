@@ -5,37 +5,62 @@ import { action } from '@storybook/addon-actions';
 import { McListModule } from '@ptsecurity/mosaic';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
+const folders = [
+    { name: 'Photos' },
+    { name: 'Recipes' },
+    { name: 'Work' }
+];
+
 
 storiesOf('List', module)
-    .add('list', () => ({
+    .add('Default', () => ({
         /* tslint:disable:no-trailing-whitespace */
         template: `
-        <h5>multiple selection</h5>
-        <mc-list-selection [(ngModel)]="multipleSelected" (selectionChange)="onSelectionChange($event)">
-            <mc-list-option value="Disabled" disabled>Disabled</mc-list-option>
-            <mc-list-option value="Normal">Normal</mc-list-option>
-            <mc-list-option value="Hovered" class="mc-hovered">Hovered</mc-list-option>
-            <mc-list-option value="Focused" class="mc-focused">Focused</mc-list-option>
-            <mc-list-option value="Selected" class="mc-selected">Selected</mc-list-option>
+        <h5>With default parameters (multiple="true", autoselect="true", no-unselect="true")</h5>
+        <mc-list-selection
+            class="mc-no-select"
+            [(ngModel)]="selectedItems"
+            (selectionChange)="onSelectionChange($event)">
+
+            <mc-list-option value="disabled" disabled>Disabled</mc-list-option>
+            <mc-list-option value="Item 1">Item 1</mc-list-option>
+            <mc-list-option value="Item 2">Item 2</mc-list-option>
+            <mc-list-option value="Item 3">Item 3</mc-list-option>
+            <mc-list-option value="Item 4">Item 4</mc-list-option>
+            <mc-list-option *ngFor="let folder of folders" value="{{ folder.name }}">{{ folder.name }}</mc-list-option>
         </mc-list-selection>
         <br>
-        <div>multipleSelected: {{ multipleSelected }}</div>
+        <div>Selected: {{ selectedItems}}</div>
         `,
         props: {
-            folders: array('folders', [
-                {
-                    name: 'Photos',
-                    updated: new Date('1/1/16')
-                },
-                {
-                    name: 'Recipes',
-                    updated: new Date('1/17/16')
-                },
-                {
-                    name: 'Work',
-                    updated: new Date('1/28/16')
-                }
-            ]),
+            folders,
+            onSelectionChange: action('selectionChange')
+        },
+        moduleMetadata: {
+            imports: [ BrowserAnimationsModule, McListModule]
+        }
+    }))
+    .add('With multiple="false"', () => ({
+        /* tslint:disable:no-trailing-whitespace */
+        template: `
+        <h5>With parameter multiple="false"</h5>
+        <mc-list-selection
+            multiple="false"
+            [(ngModel)]="selectedItems"
+            (selectionChange)="onSelectionChange($event)">
+
+            <mc-list-option value="disabled" disabled>Disabled</mc-list-option>
+            <mc-list-option value="Item 1">Item 1</mc-list-option>
+            <mc-list-option value="Item 2">Item 2</mc-list-option>
+            <mc-list-option value="Item 3">Item 3</mc-list-option>
+            <mc-list-option value="Item 4">Item 4</mc-list-option>
+            <mc-list-option *ngFor="let folder of folders" value="{{ folder.name }}">{{ folder.name }}</mc-list-option>
+        </mc-list-selection>
+        <br>
+        <div>Selected: {{ selectedItems}}</div>
+        `,
+        props: {
+            folders,
             onSelectionChange: action('selectionChange')
         },
         moduleMetadata: {
