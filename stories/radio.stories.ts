@@ -14,7 +14,7 @@ storiesOf('Radio', module)
                 }
                 
                 .example-radio-button {
-                    margin-bottom: 8px;
+                    margin-bottom: 10px;
                 }
             </style>
             <div>
