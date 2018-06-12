@@ -1,19 +1,13 @@
 import { storiesOf } from '@storybook/angular';
-import { array, boolean, text } from '@storybook/addon-knobs/angular';
+import { withKnobs, array, boolean, text, object } from '@storybook/addon-knobs';
 import { action } from '@storybook/addon-actions';
 
 import { McListModule } from '@ptsecurity/mosaic';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-
-const folders = [
-    { name: 'Photos' },
-    { name: 'Recipes' },
-    { name: 'Work' }
-];
 
 
 storiesOf('List', module)
-    .add('Default', () => ({
+    .addDecorator(withKnobs)
+    .add('List Default', () => ({
         /* tslint:disable:no-trailing-whitespace */
         template: `
         <h5>With default parameters (multiple="true", autoselect="true", no-unselect="true")</h5>
@@ -29,15 +23,19 @@ storiesOf('List', module)
             <mc-list-option value="Item 4">Item 4</mc-list-option>
             <mc-list-option *ngFor="let folder of folders" value="{{ folder.name }}">{{ folder.name }}</mc-list-option>
         </mc-list-selection>
-        <br>
-        <div>Selected: {{ selectedItems}}</div>
+
+        <p>Selected: {{ selectedItems}}</p>
         `,
         props: {
-            folders,
+            folders: object('folders', [
+                { name: 'Photos' },
+                { name: 'Recipes' },
+                { name: 'Work' }
+            ]),
             onSelectionChange: action('selectionChange')
         },
         moduleMetadata: {
-            imports: [ BrowserAnimationsModule, McListModule]
+            imports: [ McListModule ]
         }
     }))
     .add('With multiple="false"', () => ({
@@ -56,14 +54,18 @@ storiesOf('List', module)
             <mc-list-option value="Item 4">Item 4</mc-list-option>
             <mc-list-option *ngFor="let folder of folders" value="{{ folder.name }}">{{ folder.name }}</mc-list-option>
         </mc-list-selection>
-        <br>
-        <div>Selected: {{ selectedItems}}</div>
+
+        <p>Selected: {{ selectedItems}}</p>
         `,
         props: {
-            folders,
+            folders: object('folders', [
+                { name: 'Photos' },
+                { name: 'Recipes' },
+                { name: 'Work' }
+            ]),
             onSelectionChange: action('selectionChange')
         },
         moduleMetadata: {
-            imports: [ BrowserAnimationsModule, McListModule]
+            imports: [ McListModule ]
         }
     }));
