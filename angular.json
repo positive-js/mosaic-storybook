@@ -16,6 +16,7 @@
                         "assets": [
                         ],
                         "styles": [
+                            "./node_modules/@ptsecurity/mosaic-icons/dist/styles/_mc-icons.scss'"
                         ],
                         "scripts": []
                     },
