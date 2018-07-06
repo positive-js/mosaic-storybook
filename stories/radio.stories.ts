@@ -1,5 +1,5 @@
 import { storiesOf } from '@storybook/angular';
-import { boolean, text } from '@storybook/addon-knobs/angular';
+import { boolean } from '@storybook/addon-knobs/angular';
 import { McRadioModule } from '@ptsecurity/mosaic';
 
 
@@ -20,8 +20,7 @@ storiesOf('Radio', module)
             <div>
                 <mc-radio-group
                     class="example-radio-group"
-                    name="my_options"
-                    [disabled]="isDisabled">
+                    name="my_options">
                     <mc-radio-button class="example-radio-button" value="option_1">Option 1</mc-radio-button>
                     <mc-radio-button class="example-radio-button" value="option_2">Option 2</mc-radio-button>
                     <mc-radio-button class="example-radio-button" value="option_3">Option 3</mc-radio-button>
@@ -30,8 +29,33 @@ storiesOf('Radio', module)
             </div>
         `,
         /* tslint:enable:no-trailing-whitespace */
+        moduleMetadata: {
+            imports: [McRadioModule]
+        }
+    }))
+    .add('disabled radio group', () => ({
+        template: `
+            <style>
+                .example-radio-group {
+                    display: inline-flex;
+                    flex-direction: column;
+                }
+                
+                .example-radio-button {
+                    margin-bottom: 10px;
+                }
+            </style>
+            <mc-radio-group
+                class="example-radio-group"
+                name="my_options"
+                [disabled]="disabled">
+                <mc-radio-button class="example-radio-button" value="option_1">Option 1</mc-radio-button>
+                <mc-radio-button class="example-radio-button" value="option_2">Option 2</mc-radio-button>
+                <mc-radio-button class="example-radio-button" value="option_3">Option 3</mc-radio-button>
+            </mc-radio-group>
+        `,
         props: {
-
+            disabled: boolean('disabled', true)
         },
         moduleMetadata: {
             imports: [McRadioModule]

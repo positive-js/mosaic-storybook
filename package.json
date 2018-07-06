@@ -30,6 +30,7 @@
         "@angular/cli": "^6.0.8",
         "@angular/compiler-cli": "^6.0.4",
         "@angular/language-service": "^6.0.4",
+        "@ptsecurity/tslint-config": "^0.6.8",
         "@storybook/addon-actions": "^4.0.0-alpha.10",
         "@storybook/addon-knobs": "^4.0.0-alpha.10",
         "@storybook/addon-links": "^4.0.0-alpha.10",
