@@ -1,5 +1,5 @@
 import { storiesOf } from '@storybook/angular';
-import { boolean, text } from '@storybook/addon-knobs/angular';
+import { boolean, text } from '@storybook/addon-knobs';
 import { McButtonModule } from '@ptsecurity/mosaic';
 
 

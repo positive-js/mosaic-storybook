@@ -1,5 +1,5 @@
 import { storiesOf } from '@storybook/angular';
-import { boolean } from '@storybook/addon-knobs/angular';
+import { boolean } from '@storybook/addon-knobs';
 import { McRadioModule } from '@ptsecurity/mosaic';
 
 

@@ -2,7 +2,7 @@
 
 import { configure, addDecorator } from '@storybook/angular';
 import { setOptions } from '@storybook/addon-options';
-import { withKnobs } from '@storybook/addon-knobs/angular';
+import { withKnobs } from '@storybook/addon-knobs';
 
 setOptions({
   name: 'PT Mosaic'
