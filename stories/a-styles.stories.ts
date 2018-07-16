@@ -66,4 +66,9 @@ storiesOf('Styles', module)
             <div class="mc-small-text">Small text</div>
             <div class="mc-extra-small-text">Extra Small text</div>
         `
+    }))
+    .add('Color', () => ({
+        template: `
+            
+        `
     }));
