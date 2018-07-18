@@ -51,7 +51,7 @@ storiesOf('Styles', module)
         
             <br>
         
-            <div class="mc-body_bold">Body bold</div>
+            <div class="mc-body_strong">Body strong</div>
             <div class="mc-body_caps">BODY CAPS</div>
             <div class="mc-body_mono">Body mono</div>
         
