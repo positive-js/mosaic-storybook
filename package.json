@@ -36,6 +36,7 @@
         "@storybook/addon-links": "^4.0.0-alpha.14",
         "@storybook/addon-notes": "^4.0.0-alpha.14",
         "@storybook/addon-options": "^4.0.0-alpha.14",
+        "@storybook/addon-viewport": "^4.0.0-alpha.14",
         "@storybook/addons": "^4.0.0-alpha.14",
         "@storybook/angular": "^4.0.0-alpha.14",
         "@types/jasmine": "^2.8.8",
