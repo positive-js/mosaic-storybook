@@ -15,7 +15,7 @@ storiesOf('Button', module)
             </div>
         `,
         props: {
-                disabled: boolean('disabled', false),
+            disabled: boolean('disabled', false),
             label_Primary: text('label_Primary', 'primary'),
             label_Progress: text('label_Progress', 'progress'),
         },
