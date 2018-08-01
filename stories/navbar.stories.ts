@@ -5,7 +5,7 @@ import { configureViewport, INITIAL_VIEWPORTS, withViewport } from '@storybook/a
 
 
 storiesOf('Navbar', module)
-    .addDecorator(withViewport('Kindle Fire 2'))
+    .addDecorator(withViewport('1280px'))
     .add('navbar', () => ({
         template: `
             <style>   
@@ -96,12 +96,15 @@ storiesOf('Navbar', module)
                             <mc-navbar-title>Left icon</mc-navbar-title>
                         </mc-navbar-item>
                         <mc-navbar-item>
-                            <mc-navbar-title>No icon</mc-navbar-title>
+                            <i mc-icon="mc-calendar_16"></i>
+                            <mc-navbar-title>Left icon</mc-navbar-title>
                         </mc-navbar-item>
                         <mc-navbar-item class="mc-progress">
+                            <i mc-icon="mc-download_16"></i>
                             <mc-navbar-title>In-progress</mc-navbar-title>
                         </mc-navbar-item>
                         <mc-navbar-item class="mc-progress" disabled>
+                            <i mc-icon="mc-clock_16"></i>
                             <mc-navbar-title>Disabled in-progress</mc-navbar-title>
                         </mc-navbar-item>
                         <mc-navbar-item disabled>
@@ -138,10 +141,6 @@ storiesOf('Navbar', module)
                     </mc-navbar-container>
                 </mc-navbar>
             </div>
-            <h3>Collapse example - change viewport to see</h3>
-            <div class="nav-demo-container">
-                
-            </div>
         `,
         props: {
             disabled: boolean('disabled', false),
@@ -154,25 +153,64 @@ storiesOf('Navbar', module)
         }
     }));
 
-const newViewports = {
-    _2k: {
-        name: '_2k',
+const viewports = {
+    '840px': {
+        name: '840px',
         styles: {
-            width: '2000px'
+            width: '840px'
         }
     },
-    _1280: {
-        name: '_1280',
+    '960px': {
+        name: '960px',
+        styles: {
+            width: '960px'
+        }
+    },
+    '1024px': {
+        name: '1024px',
+        styles: {
+            width: '1024px'
+        }
+    },
+    '1280px': {
+        name: '1280px',
         styles: {
             width: '1280px'
+        }
+    },
+    '1920px': {
+        name: '1920px',
+        styles: {
+            width: '1920px'
+        }
+    },
+    '2048px': {
+        name: '2048px',
+        styles: {
+            width: '2048px'
+        }
+    },
+    '2160px': {
+        name: '2160px',
+        styles: {
+            width: '2160px'
+        }
+    },
+    '2304px': {
+        name: '2304px',
+        styles: {
+            width: '2304px'
+        }
+    },
+    '2560px': {
+        name: '2560px',
+        styles: {
+            width: '2560px'
         }
     }
 };
 
 configureViewport({
-    viewports: {
-        ...INITIAL_VIEWPORTS,
-        ...newViewports
-    },
-    defaultViewport: '_2k'
+    viewports,
+    defaultViewport: '1280px'
 });
