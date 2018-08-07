@@ -3,7 +3,7 @@ import { boolean, text } from '@storybook/addon-knobs';
 import { McButtonModule } from '@ptsecurity/mosaic';
 
 
-storiesOf('Components|Button', module)
+storiesOf('Buttons|Button', module)
     .add('buttons', () => ({
         template: `
             <div>

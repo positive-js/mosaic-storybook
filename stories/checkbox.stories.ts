@@ -3,7 +3,7 @@ import { boolean, text } from '@storybook/addon-knobs';
 import { McCheckboxModule } from '@ptsecurity/mosaic';
 
 
-storiesOf('Components|Checkbox', module)
+storiesOf('Form Controls|Checkbox', module)
     .add('checkbox', () => ({
         template: `
             <mc-checkbox> Default</mc-checkbox><br><br>

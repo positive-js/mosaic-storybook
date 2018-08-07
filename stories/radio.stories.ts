@@ -3,7 +3,7 @@ import { boolean } from '@storybook/addon-knobs';
 import { McRadioModule } from '@ptsecurity/mosaic';
 
 
-storiesOf('Components|Radio', module)
+storiesOf('Form Controls|Radio', module)
     .add('radio group', () => ({
         /* tslint:disable:no-trailing-whitespace */
         template: `
