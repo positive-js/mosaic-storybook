@@ -3,6 +3,11 @@
 import { configure, addDecorator } from '@storybook/angular';
 import { setOptions } from '@storybook/addon-options';
 import { withKnobs } from '@storybook/addon-knobs';
+import {
+    configureViewport,
+    INITIAL_VIEWPORTS,
+} from '@storybook/addon-viewport';
+import { newViewports } from './viewports-config';
 
 
 setOptions({
@@ -12,6 +17,14 @@ setOptions({
 });
 
 addDecorator(withKnobs);
+
+configureViewport({
+    defaultViewport: 'responsive',
+    viewports: {
+        ...newViewports,
+        ...INITIAL_VIEWPORTS
+    }
+});
 
 // automatically import all files ending in *.stories.ts
 const req = require.context('../stories', true, /.stories.ts$/);

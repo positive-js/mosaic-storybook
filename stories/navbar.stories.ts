@@ -1,11 +1,9 @@
 import { storiesOf } from '@storybook/angular';
 import { boolean, text } from '@storybook/addon-knobs';
 import { McNavbarModule, McIconModule } from '@ptsecurity/mosaic';
-import { configureViewport, INITIAL_VIEWPORTS, withViewport } from '@storybook/addon-viewport';
 
 
 storiesOf('Navigation|Navbar', module)
-    .addDecorator(withViewport('1280px'))
     .add('navbar', () => ({
         template: `
             <style>   
@@ -152,65 +150,3 @@ storiesOf('Navigation|Navbar', module)
             imports: [McNavbarModule, McIconModule]
         }
     }));
-
-const viewports = {
-    '840px': {
-        name: '840px',
-        styles: {
-            width: '840px'
-        }
-    },
-    '960px': {
-        name: '960px',
-        styles: {
-            width: '960px'
-        }
-    },
-    '1024px': {
-        name: '1024px',
-        styles: {
-            width: '1024px'
-        }
-    },
-    '1280px': {
-        name: '1280px',
-        styles: {
-            width: '1280px'
-        }
-    },
-    '1920px': {
-        name: '1920px',
-        styles: {
-            width: '1920px'
-        }
-    },
-    '2048px': {
-        name: '2048px',
-        styles: {
-            width: '2048px'
-        }
-    },
-    '2160px': {
-        name: '2160px',
-        styles: {
-            width: '2160px'
-        }
-    },
-    '2304px': {
-        name: '2304px',
-        styles: {
-            width: '2304px'
-        }
-    },
-    '2560px': {
-        name: '2560px',
-        styles: {
-            width: '2560px'
-        }
-    }
-};
-
-configureViewport({
-    viewports,
-    defaultViewport: '1280px'
-});
