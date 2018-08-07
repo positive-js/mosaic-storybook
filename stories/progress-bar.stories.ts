@@ -13,7 +13,7 @@ const colors = {
     warn: 'warn'
 };
 
-storiesOf('Progress bar', module)
+storiesOf('Indicators|Progress bar', module)
     .add('Simple progress bar', () => ({
         template: `
             <div>

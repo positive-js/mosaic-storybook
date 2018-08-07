@@ -2,8 +2,8 @@ import { storiesOf } from '@storybook/angular';
 import { boolean, text } from '@storybook/addon-knobs';
 
 
-storiesOf('Styles', module)
-    .add('Typography', () => ({
+storiesOf('Styles|Typography', module)
+    .add('Display and Headers', () => ({
         template: `
             <style>
                 small {
@@ -65,10 +65,5 @@ storiesOf('Styles', module)
         
             <div class="mc-small-text">Small text</div>
             <div class="mc-extra-small-text">Extra Small text</div>
-        `
-    }))
-    .add('Color', () => ({
-        template: `
-            
         `
     }));

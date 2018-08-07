@@ -2,7 +2,7 @@ import { storiesOf } from '@storybook/angular';
 import { boolean, text } from '@storybook/addon-knobs';
 
 
-storiesOf('Badges', module)
+storiesOf('Indicators|Badges', module)
     .add('badges', () => ({
         template: `
             <style>

@@ -14,7 +14,7 @@ const colors = {
     warn: 'warn'
 };
 
-storiesOf('Progress spinner', module)
+storiesOf('Indicators|Progress spinner', module)
     .add('Simple progress spinner', () => ({
         template: `
             <style>

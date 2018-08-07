@@ -4,7 +4,7 @@ import { McNavbarModule, McIconModule } from '@ptsecurity/mosaic';
 import { configureViewport, INITIAL_VIEWPORTS, withViewport } from '@storybook/addon-viewport';
 
 
-storiesOf('Navbar', module)
+storiesOf('Navigation|Navbar', module)
     .addDecorator(withViewport('1280px'))
     .add('navbar', () => ({
         template: `

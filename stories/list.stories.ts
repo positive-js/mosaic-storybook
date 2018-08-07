@@ -5,7 +5,7 @@ import { action } from '@storybook/addon-actions';
 import { McListModule } from '@ptsecurity/mosaic';
 
 
-storiesOf('List', module)
+storiesOf('Components|List', module)
     .addDecorator(withKnobs)
     .add('List Default', () => ({
         /* tslint:disable:no-trailing-whitespace */
