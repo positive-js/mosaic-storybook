@@ -3,7 +3,7 @@ import { boolean, text } from '@storybook/addon-knobs';
 import { McInputModule, McFormFieldModule, McIconModule } from '@ptsecurity/mosaic';
 import { FormsModule } from '@angular/forms';
 
-storiesOf('Input', module)
+storiesOf('Form Controls|Input', module)
     .add('inputs', () => ({
         template: `
             <div style="width: 200px">
