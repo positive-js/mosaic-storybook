@@ -12,6 +12,7 @@ import { newViewports } from './viewports-config';
 
 setOptions({
     name: 'PT Mosaic',
+    sortStoriesByKind: true,
     hierarchySeparator: /\//,
     hierarchyRootSeparator: /\|/
 });
