@@ -41,15 +41,26 @@ storiesOf('Form Controls|Select', module)
             onSelectionChange: action('selectionChange')
         },
         moduleMetadata: {
-            imports: [McSelectModule, BrowserAnimationsModule]
+            imports: [McSelectModule]
         }
     }))
     .add('Multiselect', () => ({
         /* tslint:disable:no-trailing-whitespace */
         template: `
+        <style>
+            .dev-container {
+                width: 300px;
+                height: 140px;
+            
+                border: 1px solid red;
+            
+                padding: 24px;
+            }
+        </style>
+        
         <h5>With parameter multiple="true"</h5>
-        <div style="width: 200px">
-            <mc-form-field style="width: 100%">
+        <div class="dev-container">
+            <mc-form-field>
                 <mc-select multiple #select="mcSelect" [(value)]="multipleSelected">
                     <mc-option value="Disabled" disabled>Disabled</mc-option>
                     <mc-option value="Normal">Normal</mc-option>
@@ -75,6 +86,8 @@ storiesOf('Form Controls|Select', module)
         <p>Selected: {{ multipleSelected }}</p>
         `,
         props: {
+            multipleSelected: ['Normal', 'Hovered', 'Selected', 'Selected1'],
+
             folders: object('folders', [
                 { name: 'Photos' },
                 { name: 'Recipes' },
@@ -83,6 +96,6 @@ storiesOf('Form Controls|Select', module)
             onSelectionChange: action('selectionChange')
         },
         moduleMetadata: {
-            imports: [McSelectModule, BrowserAnimationsModule]
+            imports: [McSelectModule]
         }
     }));
