@@ -41,7 +41,7 @@ storiesOf('Form Controls|Select', module)
             onSelectionChange: action('selectionChange')
         },
         moduleMetadata: {
-            imports: [McSelectModule]
+            imports: [McSelectModule, BrowserAnimationsModule]
         }
     }))
     .add('Multiselect', () => ({
@@ -96,6 +96,6 @@ storiesOf('Form Controls|Select', module)
             onSelectionChange: action('selectionChange')
         },
         moduleMetadata: {
-            imports: [McSelectModule]
+            imports: [McSelectModule, BrowserAnimationsModule]
         }
     }));
