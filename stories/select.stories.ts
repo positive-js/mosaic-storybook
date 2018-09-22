@@ -73,7 +73,9 @@ storiesOf('Form Controls|Select', module)
                     <mc-option value="Selected2">Selected2</mc-option>
                     <mc-option value="Selected3">Selected3</mc-option>
                     <mc-option value="Selected4">Selected4</mc-option>
-                    <mc-option value="Selected5">Selected5</mc-option>
+                    <mc-option value="FocusedFocusedFocusedFocusedFocusedFocusedFocusedFocusedFocusedFocused">
+                        FocusedFocusedFocusedFocusedFocusedFocusedFocusedFocusedFocusedFocused
+                    </mc-option>
                     <mc-option value="Selected6">Selected6</mc-option>
                     <mc-option value="Selected7">Selected7</mc-option>
                     <mc-option value="Selected8">Selected8</mc-option>
