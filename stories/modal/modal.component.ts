@@ -1,5 +1,5 @@
-import {Component, ViewEncapsulation} from '@angular/core';
-import {McModalService} from '@ptsecurity/mosaic';
+import { Component, ViewEncapsulation } from '@angular/core';
+import { McModalService } from '@ptsecurity/mosaic';
 
 
 @Component({
@@ -13,10 +13,10 @@ export class ModalDemoComponent {
 
     showConfirm() {
         this.modalService.success({
-            mcContent   : 'Сохранить сделанные изменения в запросе "Все активы с виндой"?',
-            mcOkText    : 'Сохранить',
+            mcContent: 'Сохранить сделанные изменения в запросе "Все активы с виндой"?',
+            mcOkText: 'Сохранить',
             mcCancelText: 'Отмена',
-            mcOnOk      : () => console.log('OK')
+            mcOnOk: () => console.log('OK')
         });
     }
 }

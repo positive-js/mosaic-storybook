@@ -1,7 +1,7 @@
-import {Component, Injectable, ViewEncapsulation} from '@angular/core';
-import {BehaviorSubject, Observable, of as observableOf} from 'rxjs';
-import {FlatTreeControl} from '@ptsecurity/cdk/tree';
-import {McTreeFlatDataSource, McTreeFlattener} from '@ptsecurity/mosaic';
+import { Component, Injectable, ViewEncapsulation } from '@angular/core';
+import { BehaviorSubject, Observable, of as observableOf } from 'rxjs';
+import { FlatTreeControl } from '@ptsecurity/cdk/tree';
+import { McTreeFlatDataSource, McTreeFlattener } from '@ptsecurity/mosaic';
 
 class FileNode {
     children: FileNode[];
@@ -159,5 +159,5 @@ export class TreeComponent {
 
     private _getChildren = (node: FileNode): Observable<FileNode[]> => {
         return observableOf(node.children);
-    }
+    };
 }
