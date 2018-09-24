@@ -45,14 +45,5 @@
             }
         }
     },
-    "defaultProject": "storybook-mosaic",
-    "schematics": {
-        "@schematics/angular:component": {
-            "prefix": "app",
-            "styleext": "css"
-        },
-        "@schematics/angular:directive": {
-            "prefix": "app"
-        }
-    }
+    "defaultProject": "storybook-mosaic"
 }

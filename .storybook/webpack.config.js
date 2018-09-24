@@ -15,6 +15,26 @@ module.exports = (baseConfig) => {
                 from: 'node_modules/@ptsecurity/mosaic/prebuilt-themes/default-theme.css',
                 to: 'assets/css/default-theme.css'
             },
+            {
+                from: 'node_modules/@ptsecurity/mosaic-icons/dist/styles/mc-icons.css',
+                to: 'assets/css/mc-icons.css'
+            },
+            {
+                from: 'node_modules/@ptsecurity/mosaic-icons/dist/fonts/mc-icons.woff',
+                to: 'fonts/mc-icons.woff'
+            },
+            {
+                from: 'node_modules/@ptsecurity/mosaic-icons/dist/fonts/mc-icons.ttf',
+                to: 'fonts/mc-icons.ttf'
+            },
+            {
+                from: 'node_modules/@ptsecurity/mosaic-icons/dist/fonts/mc-icons.woff',
+                to: 'assets/fonts/mc-icons.woff'
+            },
+            {
+                from: 'node_modules/@ptsecurity/mosaic-icons/dist/fonts/mc-icons.ttf',
+                to: 'assets/fonts/mc-icons.ttf'
+            }
         ])
     );
 
