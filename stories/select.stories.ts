@@ -11,7 +11,7 @@ storiesOf('Form Controls|Select', module)
     .add('Default', () => ({
         /* tslint:disable:no-trailing-whitespace */
         template: `
-        <h5>With default parameters</h5>
+        <h5 class="mc-title">With default parameters</h5>
         <div style="width: 200px">
             <mc-form-field style="width: 100%">
                 <mc-select [(value)]="selected">
@@ -34,7 +34,7 @@ storiesOf('Form Controls|Select', module)
             </mc-form-field>
         </div>
 
-        <p>Selected: {{ selected }}</p>
+        <p class="mc-body">Selected: {{ selected }}</p>
         `,
         props: {
             selected: 'Hovered',
@@ -58,7 +58,7 @@ storiesOf('Form Controls|Select', module)
             }
         </style>
         
-        <h5>With parameter multiple="true"</h5>
+        <h5 class="mc-title">With parameter multiple="true"</h5>
         <div class="dev-container">
             <mc-form-field>
                 <mc-select multiple #select="mcSelect" [(value)]="multipleSelected">
@@ -85,7 +85,7 @@ storiesOf('Form Controls|Select', module)
             </mc-form-field>
         </div>
 
-        <p>Selected: {{ multipleSelected }}</p>
+        <p class="mc-body">Selected: {{ multipleSelected }}</p>
         `,
         props: {
             multipleSelected: ['Normal', 'Hovered', 'Selected', 'Selected1'],
