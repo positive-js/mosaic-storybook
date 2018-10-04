@@ -65,15 +65,20 @@
 </style>
 
 <script>
-  if (window.parent !== window) {
-    window.__REACT_DEVTOOLS_GLOBAL_HOOK__ = window.parent.__REACT_DEVTOOLS_GLOBAL_HOOK__;
-    window.__VUE_DEVTOOLS_GLOBAL_HOOK__ = window.parent.__VUE_DEVTOOLS_GLOBAL_HOOK__;
+  try {
+    if (window.parent !== window) {
+      window.__REACT_DEVTOOLS_GLOBAL_HOOK__ = window.parent.__REACT_DEVTOOLS_GLOBAL_HOOK__;
+      window.__VUE_DEVTOOLS_GLOBAL_HOOK__ = window.parent.__VUE_DEVTOOLS_GLOBAL_HOOK__;
+    }
+  } catch (e) {
+    console.warn('unable to connect to parent frame for connecting dev tools');
   }
 </script>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,500" rel="stylesheet">
 
 <link href="assets/css/default-theme.css" rel="stylesheet">
+<link href="assets/css/default-visual.css" rel="stylesheet">
 <link href="assets/css/mc-icons.css" rel="stylesheet">
 
 <style>
@@ -146,11 +151,11 @@
       
     
       
-        <script src="static/vendors~iframe.911438ff199578d414ea.bundle.js" defer></script>
+        <script src="static/vendors~iframe.6a04a7726d690c084457.bundle.js" defer></script>
       
     
       
-        <script src="static/iframe.fcfc5522ac219aa28181.bundle.js" defer></script>
+        <script src="static/iframe.bddef0fdc5ea849950c5.bundle.js" defer></script>
       
     
   
