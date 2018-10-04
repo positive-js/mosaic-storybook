@@ -82,7 +82,7 @@ storiesOf('Layout|Layout Flex', module)
                     },
                     {}
                 ),
-                
+
                 'flex-5'
             )
         }
