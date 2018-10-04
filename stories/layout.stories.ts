@@ -51,4 +51,39 @@ storiesOf('Layout|Layout Flex', module)
             </div>
         `,
         props: {}
+    }))
+    .add('Size of child container', () => ({
+        template: `
+            <style>
+                .block {
+                    border: 1px solid black;
+                    padding: 10px;
+                    margin: 10px;
+                }
+            </style>
+            
+            <h1 class="mc-h1">Size of child container</h1>
+            <div class="layout-row block">
+                <div class="flex-5 block">flex-5</div>
+                <div class="{{blockSize}} block">{{blockSize}}</div>
+                <div class="flex-5 block">flex-5</div>
+            </div>
+        `,
+        props: {
+            blockSize: select(
+                'Central container size',
+
+                // numbers from 0 to 100 which divide on 5 (0, 5, 10, ... ) plus 33, 66, 99
+                // and convert them into object { 'flex-0: 'flex-0', ..., 'flex-100': 'flex-100' }
+                [ 0, 5, 10, 15, 20, 25, 30, 33, 35, 40, 45, 50, 60, 65, 66, 70, 75, 80, 85, 90, 95, 99, 100 ].reduce(
+                    (accumulator, current) => {
+                        accumulator[`flex-${current}`] = `flex-${current}`;
+                        return accumulator;
+                    },
+                    {}
+                ),
+
+                'flex-5'
+            )
+        }
     }));
