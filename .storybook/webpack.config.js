@@ -16,6 +16,10 @@ module.exports = (baseConfig) => {
                 to: 'assets/css/default-theme.css'
             },
             {
+                from: 'node_modules/@ptsecurity/mosaic/prebuilt-visual/default-visual.css',
+                to: 'assets/css/default-visual.css'
+            },
+            {
                 from: 'node_modules/@ptsecurity/mosaic-icons/dist/styles/mc-icons.css',
                 to: 'assets/css/mc-icons.css'
             },
