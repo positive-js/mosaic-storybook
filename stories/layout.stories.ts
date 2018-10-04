@@ -3,7 +3,7 @@ import { select } from '@storybook/addon-knobs';
 
 
 storiesOf('Layout|Layout Flex', module)
-    .add('1. Simple Layout', () => ({
+    .add('Layout Directions', () => ({
         template: `
             <style>
                 .block {
@@ -24,10 +24,10 @@ storiesOf('Layout|Layout Flex', module)
             </div>
         `,
         props: {
-            layoutDirection: select('Direction for child blocks', { 'layout-column': 'layout-column block', 'layout-row': 'layout-row block'  })
+            layoutDirection: select('Direction for child blocks', { 'layout-column': 'layout-column block', 'layout-row': 'layout-row block' }, 'layout-column block')
         }
     }))
-    .add('2. Nested Layout', () => ({
+    .add('Nested Layout', () => ({
         template: `
             <style>
                 .block {
