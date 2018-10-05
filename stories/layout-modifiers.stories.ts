@@ -93,8 +93,33 @@ storiesOf('Layout|Layout Flex\/Behaviour modifiers', module)
             <div [style.width.px]="parentWidth">
                 <div class="layout-row block">
                     <div class="flex-auto block">flex-auto</div>
-                    <div class="flex-auto block">flex-auto</div>
-                    <div class="flex-auto block">flex-auto</div>
+                    <div class="flex block">flex</div>
+                    <div class="flex-none block">flex-none</div>
+                </div>
+            </div>
+        `,
+        props: {
+            parentWidth: number('Parent container width, %', 1000, { range: true, min: 20, max: 1000, step: 1}),
+        }
+    }))
+    .add('flex-grow', () => ({
+        template: `
+            <style>
+                .block {
+                    border: 1px solid black;
+                    padding: 10px;
+                    margin: 10px;
+                }
+            </style>
+            
+            <h1 class="mc-h1">flex-grow</h1>
+            <p class="mc-text-left">The item is sized according to its width and height properties. Initially absorbs all available space in the flex container, and shrinks to its minimum size to fit the container</p>
+            
+            <div [style.width.px]="parentWidth">
+                <div class="layout-row block">
+                    <div class="flex-grow block">flex-grow</div>
+                    <div class="flex block">flex</div>
+                    <div class="flex-none block">flex-none</div>
                 </div>
             </div>
         `,
