@@ -1,14 +1,6 @@
 import { storiesOf } from '@storybook/angular';
 import { select } from '@storybook/addon-knobs';
-
-const toObj = (array, prefix) =>
-    array.reduce(
-        (accumulator, item) => {
-            accumulator[`${prefix}${item}`] = `${prefix}${item}`;
-            return accumulator;
-        },
-        {}
-    )
+import * as utils from '../utils';
 
 storiesOf('Layout|Layout Flex', module)
     .add('Layout Directions', () => ({
@@ -84,7 +76,7 @@ storiesOf('Layout|Layout Flex', module)
 
                 // numbers from 0 to 100 which divide on 5 (0, 5, 10, ... ) plus 33, 66, 99
                 // and convert them into object { 'flex-0: 'flex-0', ..., 'flex-100': 'flex-100' }
-                toObj([ 0, 5, 10, 15, 20, 25, 30, 33, 35, 40, 45, 50, 60, 65, 66, 70, 75, 80, 85, 90, 95, 100 ], 'flex-'),
+                utils.toObj([ 0, 5, 10, 15, 20, 25, 30, 33, 35, 40, 45, 50, 60, 65, 66, 70, 75, 80, 85, 90, 95, 100 ], 'flex-'),
 
                 'flex-5'
             )
@@ -109,8 +101,8 @@ storiesOf('Layout|Layout Flex', module)
             </div>
         `,
         props: {
-            firstContainerOrder: select('First container', toObj([0, 1, 2, 3, 4, 5, 6, 7, 8, 9], 'flex-order-'), 'flex-order-0'),
-            secondContainerOrder: select('Second container', toObj([0, 1, 2, 3, 4, 5, 6, 7, 8, 9], 'flex-order-'), 'flex-order-1'),
-            thirdContainerOrder: select('Third container', toObj([0, 1, 2, 3, 4, 5, 6, 7, 8, 9], 'flex-order-'), 'flex-order-2')
+            firstContainerOrder: select('First container', utils.toObj([0, 1, 2, 3, 4, 5, 6, 7, 8, 9], 'flex-order-'), 'flex-order-0'),
+            secondContainerOrder: select('Second container', utils.toObj([0, 1, 2, 3, 4, 5, 6, 7, 8, 9], 'flex-order-'), 'flex-order-1'),
+            thirdContainerOrder: select('Third container', utils.toObj([0, 1, 2, 3, 4, 5, 6, 7, 8, 9], 'flex-order-'), 'flex-order-2')
         }
     }));
