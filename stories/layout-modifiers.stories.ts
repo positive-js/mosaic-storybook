@@ -51,4 +51,29 @@ storiesOf('Layout|Layout Flex\/Behaviour modifiers', module)
         props: {
             parentWidth: number('Parent container width, %', 1000, { range: true, min: 20, max: 1000, step: 1}),
         }
+    }))
+    .add('flex-none', () => ({
+        template: `
+            <style>
+                .block {
+                    border: 1px solid black;
+                    padding: 10px;
+                    margin: 10px;
+                }
+            </style>
+            
+            <h1 class="mc-h1">flex-none</h1>
+            <p class="mc-text-left">It is fully inflexible: it neither shrinks nor grows in relation to the flex container</p>
+            
+            <div [style.width.px]="parentWidth">
+                <div class="layout-row block">
+                    <div class="flex block">flex</div>
+                    <div class="flex block">flex</div>
+                    <div class="flex-none block">flex-none</div>
+                </div>
+            </div>
+        `,
+        props: {
+            parentWidth: number('Parent container width, %', 1000, { range: true, min: 20, max: 1000, step: 1}),
+        }
     }));
