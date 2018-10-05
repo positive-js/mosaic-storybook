@@ -19,7 +19,7 @@ storiesOf('Layout|Layout Flex\/Behaviour modifiers', module)
                 <div class="layout-row block">
                     <div class="flex block">flex</div>
                     <div class="flex block">flex</div>
-                    <div class="flex block">flex</div>
+                    <div class="flex-none block">flex-none</div>
                 </div>
             </div>
         `,
@@ -42,9 +42,9 @@ storiesOf('Layout|Layout Flex\/Behaviour modifiers', module)
                 
             <div [style.width.px]="parentWidth">
                 <div class="layout-row block">
+                    <div class="flex-initial block">flex-initial</div>
                     <div class="flex block">flex</div>
-                    <div class="flex-initial block">flex-initial</div>
-                    <div class="flex-initial block">flex-initial</div>
+                    <div class="flex-none block">flex-none</div>
                 </div>
             </div>
         `,
@@ -67,7 +67,7 @@ storiesOf('Layout|Layout Flex\/Behaviour modifiers', module)
             
             <div [style.width.px]="parentWidth">
                 <div class="layout-row block">
-                    <div class="flex block">flex</div>
+                    <div class="flex-none block">flex-none</div>
                     <div class="flex block">flex</div>
                     <div class="flex-none block">flex-none</div>
                 </div>
@@ -138,11 +138,36 @@ storiesOf('Layout|Layout Flex\/Behaviour modifiers', module)
             </style>
             
             <h1 class="mc-h1">flex-nogrow</h1>
-            <p class="mc-text-left">The item is sized according to its width and height properties. Initially absorbs all available space in the flex container, and shrinks to its minimum size to fit the container. The same as <strong>flex-initial</strong></p>
+            <p class="mc-text-left">It shrinks to its minimum size to fit the container, but does not grow to absorb any extra free space in the flex container. The same as <strong>flex-initial</strong></p>
             
             <div [style.width.px]="parentWidth">
                 <div class="layout-row block">
                     <div class="flex-nogrow block">flex-nogrow</div>
+                    <div class="flex block">flex</div>
+                    <div class="flex-none block">flex-none</div>
+                </div>
+            </div>
+        `,
+        props: {
+            parentWidth: number('Parent container width, %', 1000, { range: true, min: 20, max: 1000, step: 1}),
+        }
+    }))
+    .add('flex-noshrink', () => ({
+        template: `
+            <style>
+                .block {
+                    border: 1px solid black;
+                    padding: 10px;
+                    margin: 10px;
+                }
+            </style>
+            
+            <h1 class="mc-h1">flex-noshrink</h1>
+            <p class="mc-text-left">It initially absorbs any extra free space in the flex container but it shrinks to container size.</p>
+            
+            <div [style.width.px]="parentWidth">
+                <div class="layout-row block">
+                    <div class="flex-noshrink block">flex-noshrink</div>
                     <div class="flex block">flex</div>
                     <div class="flex-none block">flex-none</div>
                 </div>
