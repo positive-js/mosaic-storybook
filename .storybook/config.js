@@ -3,7 +3,6 @@
 import { configure, addDecorator } from '@storybook/angular';
 import { setOptions } from '@storybook/addon-options';
 import { withKnobs } from '@storybook/addon-knobs';
-import { withNotes } from '@storybook/addon-notes';
 import {
     configureViewport,
     INITIAL_VIEWPORTS,
@@ -19,7 +18,6 @@ setOptions({
 });
 
 addDecorator(withKnobs);
-addDecorator(withNotes);
 
 configureViewport({
     defaultViewport: 'responsive',
