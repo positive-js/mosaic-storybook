@@ -24,7 +24,7 @@ storiesOf('Layout|Layout Flex\/Behaviour modifiers', module)
             </div>
         `,
         props: {
-            parentWidth: number('Parent container width, %', 1000, { range: true, min: 20, max: 1000, step: 1}),
+            parentWidth: number('Parent width', 1000, { range: true, min: 20, max: 1000, step: 10}),
         }
     }))
     .add('flex-initial', () => ({
@@ -49,7 +49,7 @@ storiesOf('Layout|Layout Flex\/Behaviour modifiers', module)
             </div>
         `,
         props: {
-            parentWidth: number('Parent container width, %', 1000, { range: true, min: 20, max: 1000, step: 1}),
+            parentWidth: number('Parent width', 1000, { range: true, min: 20, max: 1000, step: 10}),
         }
     }))
     .add('flex-none', () => ({
@@ -74,7 +74,7 @@ storiesOf('Layout|Layout Flex\/Behaviour modifiers', module)
             </div>
         `,
         props: {
-            parentWidth: number('Parent container width, %', 1000, { range: true, min: 20, max: 1000, step: 1}),
+            parentWidth: number('Parent width', 1000, { range: true, min: 20, max: 1000, step: 10}),
         }
     }))
     .add('flex-auto', () => ({
@@ -99,7 +99,7 @@ storiesOf('Layout|Layout Flex\/Behaviour modifiers', module)
             </div>
         `,
         props: {
-            parentWidth: number('Parent container width, %', 1000, { range: true, min: 20, max: 1000, step: 1}),
+            parentWidth: number('Parent width', 1000, { range: true, min: 20, max: 1000, step: 10}),
         }
     }))
     .add('flex-grow', () => ({
@@ -124,7 +124,7 @@ storiesOf('Layout|Layout Flex\/Behaviour modifiers', module)
             </div>
         `,
         props: {
-            parentWidth: number('Parent container width, %', 1000, { range: true, min: 20, max: 1000, step: 1}),
+            parentWidth: number('Parent width', 1000, { range: true, min: 20, max: 1000, step: 10}),
         }
     }))
     .add('flex-nogrow', () => ({
@@ -149,7 +149,7 @@ storiesOf('Layout|Layout Flex\/Behaviour modifiers', module)
             </div>
         `,
         props: {
-            parentWidth: number('Parent container width, %', 1000, { range: true, min: 20, max: 1000, step: 1}),
+            parentWidth: number('Parent width', 1000, { range: true, min: 20, max: 1000, step: 10}),
         }
     }))
     .add('flex-noshrink', () => ({
@@ -174,6 +174,66 @@ storiesOf('Layout|Layout Flex\/Behaviour modifiers', module)
             </div>
         `,
         props: {
-            parentWidth: number('Parent container width, %', 1000, { range: true, min: 20, max: 1000, step: 1}),
+            parentWidth: number('Parent width', 1000, { range: true, min: 20, max: 1000, step: 10}),
+        }
+    }))
+    .add('all', () => ({
+        template: `
+            <style>
+                .block {
+                    border: 1px solid black;
+                    padding: 5px;
+                    margin: 5px;
+                }
+            </style>
+            
+            <h1 class="mc-h1">All modifiers on one page</h1>
+            
+            <div [style.width.px]="parentWidth">
+                <div class="layout-row block">
+                    <div class="flex block">flex</div>
+                    <div class="flex block">flex</div>
+                    <div class="flex-none block">flex-none</div>
+                </div>
+                
+                <div class="layout-row block">
+                    <div class="flex-initial block">flex-initial</div>
+                    <div class="flex block">flex</div>
+                    <div class="flex-none block">flex-none</div>
+                </div>
+                
+                <div class="layout-row block">
+                    <div class="flex-none block">flex-none</div>
+                    <div class="flex block">flex</div>
+                    <div class="flex-none block">flex-none</div>
+                </div>
+                
+                <div class="layout-row block">
+                    <div class="flex-auto block">flex-auto</div>
+                    <div class="flex block">flex</div>
+                    <div class="flex-none block">flex-none</div>
+                </div>
+                
+                <div class="layout-row block">
+                    <div class="flex-grow block">flex-grow</div>
+                    <div class="flex block">flex</div>
+                    <div class="flex-none block">flex-none</div>
+                </div>
+                
+                <div class="layout-row block">
+                    <div class="flex-nogrow block">flex-nogrow</div>
+                    <div class="flex block">flex</div>
+                    <div class="flex-none block">flex-none</div>
+                </div>
+                
+                <div class="layout-row block">
+                    <div class="flex-noshrink block">flex-noshrink</div>
+                    <div class="flex block">flex</div>
+                    <div class="flex-none block">flex-none</div>
+                </div>
+            </div>
+        `,
+        props: {
+            parentWidth: number('Parent width', 1000, { range: true, min: 20, max: 1000, step: 10}),
         }
     }));
