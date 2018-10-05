@@ -49,7 +49,7 @@ storiesOf('Layout|Layout Flex', module)
                 <h1 class="mc-h1">Nested layout</h1>
                 
                 <div class="layout-row block">
-                    <div class="layout-column block">
+                    <div class="flex layout-column block">
                         <div class="flex block">first</div>
                         <div class="flex block">second</div>
                     </div>
