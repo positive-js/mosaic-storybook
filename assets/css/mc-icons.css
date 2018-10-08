@@ -10,9 +10,13 @@ body {
 }
 
 
+
+
 @font-face {
 	font-family:"PT Mosaic Icons";
-	src: url('../fonts/mc-icons.woff') format("woff");
+	
+		src: url('../fonts/mc-icons.woff') format("woff");
+	
 	font-weight:normal;
 	font-style:normal;
 }
