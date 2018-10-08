@@ -2,13 +2,13 @@ import { storiesOf } from '@storybook/angular';
 import { select } from '@storybook/addon-knobs';
 import * as utils from '../utils';
 
-storiesOf('Layout|Layout Flex', module)
-    .add('Offsets (base)', () => ({
+storiesOf('Layout|Layout Flex\/Offsets', module)
+    .add('Offsets', () => ({
         template: `
             <style>
                 .block {
                     border: 1px solid black;
-                    padding: 10px;
+                    padding: 8px;
                 }
             </style>
             
