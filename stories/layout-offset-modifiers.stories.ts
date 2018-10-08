@@ -1,5 +1,5 @@
 import { storiesOf } from '@storybook/angular';
-import { select } from '@storybook/addon-knobs';
+import { select, radios } from '@storybook/addon-knobs';
 import * as utils from '../utils';
 
 storiesOf('Layout|Layout Flex\/Offsets', module)
@@ -15,7 +15,7 @@ storiesOf('Layout|Layout Flex\/Offsets', module)
                 }
             </style>
             
-            <h1 class="mc-h1">Offset Modifiers</h1>
+            <h1 class="mc-h1">Base margins and paddings</h1>
 
             <div class="layout-row block border">
                 <div class="flex {{modifier}} border">{{modifier}}</div>
@@ -35,7 +35,7 @@ storiesOf('Layout|Layout Flex\/Offsets', module)
             )
         }
     }))
-    .add('Margins and paddings with modifiers', () => ({
+    .add('Margins and padding modifiers', () => ({
         template: `
             <style>
                 .border {
@@ -47,15 +47,24 @@ storiesOf('Layout|Layout Flex\/Offsets', module)
                 }
             </style>
             
-            <h1 class="mc-h1">Offset Modifiers</h1>
+            <h1 class="mc-h1">Margin and padding modifiers</h1>
 
             <div class="layout-row block border">
-                <div class="flex layout-padding layout-margin{{margin}} border">
-                    layout-margin{{margin}}
+                <div class="flex layout-row">
+                    <div class="flex border {{margin}} {{padding}}">{{margin}} <br> {{padding}}</div>
                 </div>
             </div>
         `,
         props: {
-            margin: select('Margin', utils.toObj([8, 16, 24, 32, 40, 48], '-'), '_8')
+            margin: radios(
+                'Margin modifier',
+                utils.toObj(['sm', 'md', 'lg', 'gt-sm', 'gt-md', 'gt-lg'], 'layout-margin-'),
+                'layout-margin-md'
+            ),
+            padding: radios(
+                'Padding modifier',
+                utils.toObj(['sm', 'md', 'lg', 'gt-sm', 'gt-md', 'gt-lg'], 'layout-padding-'),
+                'layout-padding-md'
+            )
         }
     }));
