@@ -8,7 +8,7 @@ storiesOf('Layout|Layout Flex\/Offsets', module)
             <style>
                 .block {
                     border: 1px solid black;
-                    padding: 10px;
+                    padding: 8px;
                 }
             </style>
             

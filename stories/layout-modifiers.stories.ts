@@ -7,8 +7,8 @@ storiesOf('Layout|Layout Flex\/Behaviour modifiers', module)
             <style>
                 .block {
                     border: 1px solid black;
-                    padding: 10px;
-                    margin: 10px;
+                    padding: 8px;
+                    margin: 8px;
                 }
             </style>
             
@@ -32,8 +32,8 @@ storiesOf('Layout|Layout Flex\/Behaviour modifiers', module)
             <style>
                 .block {
                     border: 1px solid black;
-                    padding: 10px;
-                    margin: 10px;
+                    padding: 8px;
+                    margin: 8px;
                 }
             </style>
             
@@ -57,8 +57,8 @@ storiesOf('Layout|Layout Flex\/Behaviour modifiers', module)
             <style>
                 .block {
                     border: 1px solid black;
-                    padding: 10px;
-                    margin: 10px;
+                    padding: 8px;
+                    margin: 8px;
                 }
             </style>
             
@@ -82,8 +82,8 @@ storiesOf('Layout|Layout Flex\/Behaviour modifiers', module)
             <style>
                 .block {
                     border: 1px solid black;
-                    padding: 10px;
-                    margin: 10px;
+                    padding: 8px;
+                    margin: 8px;
                 }
             </style>
             
@@ -107,8 +107,8 @@ storiesOf('Layout|Layout Flex\/Behaviour modifiers', module)
             <style>
                 .block {
                     border: 1px solid black;
-                    padding: 10px;
-                    margin: 10px;
+                    padding: 8px;
+                    margin: 8px;
                 }
             </style>
             
@@ -132,8 +132,8 @@ storiesOf('Layout|Layout Flex\/Behaviour modifiers', module)
             <style>
                 .block {
                     border: 1px solid black;
-                    padding: 10px;
-                    margin: 10px;
+                    padding: 8px;
+                    margin: 8px;
                 }
             </style>
             
@@ -157,8 +157,8 @@ storiesOf('Layout|Layout Flex\/Behaviour modifiers', module)
             <style>
                 .block {
                     border: 1px solid black;
-                    padding: 10px;
-                    margin: 10px;
+                    padding: 8px;
+                    margin: 8px;
                 }
             </style>
             
