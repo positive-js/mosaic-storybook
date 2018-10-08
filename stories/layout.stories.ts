@@ -1,5 +1,5 @@
 import { storiesOf } from '@storybook/angular';
-import { select } from '@storybook/addon-knobs';
+import { select, number } from '@storybook/addon-knobs';
 import * as utils from '../utils';
 
 storiesOf('Layout|Layout Flex', module)
@@ -104,5 +104,28 @@ storiesOf('Layout|Layout Flex', module)
             firstContainerOrder: select('First container', utils.toObj([0, 1, 2, 3, 4, 5, 6, 7, 8, 9], 'flex-order-'), 'flex-order-0'),
             secondContainerOrder: select('Second container', utils.toObj([0, 1, 2, 3, 4, 5, 6, 7, 8, 9], 'flex-order-'), 'flex-order-1'),
             thirdContainerOrder: select('Third container', utils.toObj([0, 1, 2, 3, 4, 5, 6, 7, 8, 9], 'flex-order-'), 'flex-order-2')
+        }
+    }))
+    .add('With all properties', () => ({
+        template: `
+            <style>
+                .block { border: 1px solid black; }
+            </style>
+            
+            <h1 class="mc-h1">With all properties</h1>
+            
+            <div class="flex layout-column block" [style.width.px]="parentWidth" [style.height.px]="parentHeight">
+                <div class="flex layout-row layout-align-space-between panel-container">
+                    <div class="flex-none flex-order-3 layout-padding layout-margin block"><h2 class="mc-h2">Right Panel</h2></div>
+                    <div class="flex-grow flex-order-2 layout-padding layout-margin block"><h2 class="mc-h2">Content</h2></div>
+                    <div class="flex-none flex-order-1 layout-padding layout-margin block"><h2 class="mc-h2">Left Panel</h2></div>
+                </div>
+                
+                <div class="flex-20 layout-padding layout-margin block"><h2 class="mc-h2">Footer</h2></div>
+            </div>
+        `,
+        props: {
+            parentWidth: number('Parent width', 1000, { range: true, min: 580, max: 1000, step: 10}),
+            parentHeight: number('Parent height', 500, { range: true, min: 300, max: 500, step: 10}),
         }
     }));
