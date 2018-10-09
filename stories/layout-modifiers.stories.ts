@@ -1,5 +1,6 @@
 import { storiesOf } from '@storybook/angular';
-import { number } from '@storybook/addon-knobs';
+import { number, radios } from '@storybook/addon-knobs';
+import * as utils from "../utils";
 
 storiesOf('Layout|Layout Flex\/Behaviour modifiers', module)
     .add('flex', () => ({
@@ -7,8 +8,8 @@ storiesOf('Layout|Layout Flex\/Behaviour modifiers', module)
             <style>
                 .block {
                     border: 1px solid black;
-                    padding: 10px;
-                    margin: 10px;
+                    padding: 8px;
+                    margin: 8px;
                 }
             </style>
             
@@ -32,8 +33,8 @@ storiesOf('Layout|Layout Flex\/Behaviour modifiers', module)
             <style>
                 .block {
                     border: 1px solid black;
-                    padding: 10px;
-                    margin: 10px;
+                    padding: 8px;
+                    margin: 8px;
                 }
             </style>
             
@@ -57,8 +58,8 @@ storiesOf('Layout|Layout Flex\/Behaviour modifiers', module)
             <style>
                 .block {
                     border: 1px solid black;
-                    padding: 10px;
-                    margin: 10px;
+                    padding: 8px;
+                    margin: 8px;
                 }
             </style>
             
@@ -82,8 +83,8 @@ storiesOf('Layout|Layout Flex\/Behaviour modifiers', module)
             <style>
                 .block {
                     border: 1px solid black;
-                    padding: 10px;
-                    margin: 10px;
+                    padding: 8px;
+                    margin: 8px;
                 }
             </style>
             
@@ -107,8 +108,8 @@ storiesOf('Layout|Layout Flex\/Behaviour modifiers', module)
             <style>
                 .block {
                     border: 1px solid black;
-                    padding: 10px;
-                    margin: 10px;
+                    padding: 8px;
+                    margin: 8px;
                 }
             </style>
             
@@ -132,8 +133,8 @@ storiesOf('Layout|Layout Flex\/Behaviour modifiers', module)
             <style>
                 .block {
                     border: 1px solid black;
-                    padding: 10px;
-                    margin: 10px;
+                    padding: 8px;
+                    margin: 8px;
                 }
             </style>
             
@@ -157,8 +158,8 @@ storiesOf('Layout|Layout Flex\/Behaviour modifiers', module)
             <style>
                 .block {
                     border: 1px solid black;
-                    padding: 10px;
-                    margin: 10px;
+                    padding: 8px;
+                    margin: 8px;
                 }
             </style>
             
@@ -177,7 +178,7 @@ storiesOf('Layout|Layout Flex\/Behaviour modifiers', module)
             parentWidth: number('Parent width', 1000, { range: true, min: 20, max: 1000, step: 10}),
         }
     }))
-    .add('all', () => ({
+    .add('with wrapping', () => ({
         template: `
             <style>
                 .block {
@@ -190,43 +191,43 @@ storiesOf('Layout|Layout Flex\/Behaviour modifiers', module)
             <h1 class="mc-h1">All modifiers on one page</h1>
             
             <div [style.width.px]="parentWidth">
-                <div class="layout-row block">
+                <div class="layout-row {{wrapping}} block">
                     <div class="flex block">flex</div>
                     <div class="flex block">flex</div>
                     <div class="flex-none block">flex-none</div>
                 </div>
                 
-                <div class="layout-row block">
+                <div class="layout-row {{wrapping}} block">
                     <div class="flex-initial block">flex-initial</div>
                     <div class="flex block">flex</div>
                     <div class="flex-none block">flex-none</div>
                 </div>
                 
-                <div class="layout-row block">
+                <div class="layout-row {{wrapping}} block">
                     <div class="flex-none block">flex-none</div>
                     <div class="flex block">flex</div>
                     <div class="flex-none block">flex-none</div>
                 </div>
                 
-                <div class="layout-row block">
+                <div class="layout-row {{wrapping}} block">
                     <div class="flex-auto block">flex-auto</div>
                     <div class="flex block">flex</div>
                     <div class="flex-none block">flex-none</div>
                 </div>
                 
-                <div class="layout-row block">
+                <div class="layout-row {{wrapping}} block">
                     <div class="flex-grow block">flex-grow</div>
                     <div class="flex block">flex</div>
                     <div class="flex-none block">flex-none</div>
                 </div>
                 
-                <div class="layout-row block">
+                <div class="layout-row {{wrapping}} block">
                     <div class="flex-nogrow block">flex-nogrow</div>
                     <div class="flex block">flex</div>
                     <div class="flex-none block">flex-none</div>
                 </div>
                 
-                <div class="layout-row block">
+                <div class="layout-row {{wrapping}} block">
                     <div class="flex-noshrink block">flex-noshrink</div>
                     <div class="flex block">flex</div>
                     <div class="flex-none block">flex-none</div>
@@ -235,5 +236,6 @@ storiesOf('Layout|Layout Flex\/Behaviour modifiers', module)
         `,
         props: {
             parentWidth: number('Parent width', 1000, { range: true, min: 20, max: 1000, step: 10}),
+            wrapping: radios('Wrapping', utils.toObj(['wrap', 'nowrap'], 'layout-'), 'layout-nowrap')
         }
     }));
