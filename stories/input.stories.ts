@@ -1,5 +1,5 @@
 import { storiesOf } from '@storybook/angular';
-import { boolean, text } from '@storybook/addon-knobs';
+import { boolean, text, number } from '@storybook/addon-knobs';
 import { McInputModule, McFormFieldModule, McIconModule } from '@ptsecurity/mosaic';
 import { FormsModule } from '@angular/forms';
 
@@ -112,46 +112,22 @@ storiesOf('Form Controls|Input', module)
     .add('numeric inputs', () => ({
         template: `
                 <div style="width: 200px">                   
-                    <header>With placeholder</header>
                     <mc-form-field>
                         <i mcPrefix mc-icon="mc-search_16"></i>
                         <input mcInput [(ngModel)]="numberValue" type="number" [placeholder]="placeholder"
-                               [disabled]="disabled" [required]="required">
+                               [disabled]="disabled" [required]="required"
+                               [min]="min" [max]="max" [step]="step">
                         <mc-stepper></mc-stepper>
                     </mc-form-field>
-                
-                    <br><br>
-                
-                    <header>Min = -5 Max = 7 Step = 0.5 Big step = 1.5 </header>
-                    <mc-form-field>
-                        <input mcInput [(ngModel)]="numberValue" type="number" [placeholder]="placeholder"
-                               min="-5" max="7" step="0.5" big-step="1.5" [disabled]="disabled" [required]="required">
-                        <mc-stepper></mc-stepper>
-                    </mc-form-field>
-                
-                    <br><br>
-                
-                    <header>Min = -5 </header>
-                    <mc-form-field>
-                        <input mcInput [(ngModel)]="numberValue" type="number" [placeholder]="placeholder" 
-                               min="-5" [disabled]="disabled" [required]="required">
-                        <mc-stepper></mc-stepper>
-                    </mc-form-field>
-                
-                    <br><br>
-                
-                    <header>Step = 0.5 </header>
-                    <mc-form-field>
-                        <input mcInput [(ngModel)]="numberValue" type="number"  [placeholder]="placeholder"
-                               step="0.5" [disabled]="disabled" [required]="required">
-                        <mc-stepper></mc-stepper>
-                    </mc-form-field>
+                </div>
             `,
         props: {
             disabled: boolean('disabled', false),
             required: boolean('required', false),
             placeholder: text('placeholder', 'placeholder'),
-
+            max: number('max', 7),
+            min: number('min', -5),
+            stop: number('stop', 0.5)
         },
         moduleMetadata: {
             imports: [McInputModule, McFormFieldModule, McIconModule, FormsModule]
