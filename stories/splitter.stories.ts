@@ -1,8 +1,8 @@
 import { storiesOf } from '@storybook/angular';
-import { radios } from '@storybook/addon-knobs';
+import { boolean, radios } from '@storybook/addon-knobs';
 
 storiesOf('Splitter', module)
-    .add('Splitter|With direction changing', () => ({
+    .add('Splitter|With direction changing and disabling', () => ({
         template: `
             <style>
                 mc-splitter.horizontal {
@@ -15,19 +15,25 @@ storiesOf('Splitter', module)
                 }
             </style>
             
-            <mc-splitter [direction]="direction" [class.horizontal]="direction === 'horizontal" [class.vertical]="direction === 'vertical">
+            <mc-splitter 
+                [class.horizontal]="direction === 'horizontal" 
+                [class.vertical]="direction === 'vertical"
+                [direction]="direction" 
+                [disabled]="disabled"
+            >
                 <mc-splitter-area>first</mc-splitter-area>
                 <mc-splitter-area>second</mc-splitter-area>
                 <mc-splitter-area>third</mc-splitter-area>
             </mc-splitter>
         `,
         props: {
-            direction: radios('Direction', { 'horizontal': 'horizontal', 'vertical': 'vertical'}, 'horizontal')
+            direction: radios('Direction', { 'horizontal': 'horizontal', 'vertical': 'vertical'}, 'horizontal'),
+            disabled: boolean('Disabled', false)
         }
     }))
     .add('Splitter|With fixed width', () => ({
         template: `
-            <h1 class="mc-h1">With fixed width of the first block</h1>
+            <h1 class="mc-h1">With fixed width/height of the first block</h1>
             <style>
                 mc-splitter.horizontal {
                     border: 1px solid black;
@@ -56,4 +62,4 @@ storiesOf('Splitter', module)
         props: {
             direction: radios('Direction', { 'horizontal': 'horizontal', 'vertical': 'vertical'}, 'horizontal')
         }
-    }));;
+    }));
