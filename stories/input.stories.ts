@@ -107,5 +107,53 @@ storiesOf('Form Controls|Input', module)
         moduleMetadata: {
             imports: [McInputModule, McFormFieldModule, McIconModule, FormsModule]
         }
-    }));
+    }))
 
+    .add('numeric inputs', () => ({
+        template: `
+                <div style="width: 200px">                   
+                    <header>With placeholder</header>
+                    <mc-form-field>
+                        <i mcPrefix mc-icon="mc-search_16"></i>
+                        <input mcInput [(ngModel)]="numberValue" type="number" [placeholder]="placeholder"
+                               [disabled]="disabled" [required]="required">
+                        <mc-stepper></mc-stepper>
+                    </mc-form-field>
+                
+                    <br><br>
+                
+                    <header>Min = -5 Max = 7 Step = 0.5 Big step = 1.5 </header>
+                    <mc-form-field>
+                        <input mcInput [(ngModel)]="numberValue" type="number" [placeholder]="placeholder"
+                               min="-5" max="7" step="0.5" big-step="1.5" [disabled]="disabled" [required]="required">
+                        <mc-stepper></mc-stepper>
+                    </mc-form-field>
+                
+                    <br><br>
+                
+                    <header>Min = -5 </header>
+                    <mc-form-field>
+                        <input mcInput [(ngModel)]="numberValue" type="number" [placeholder]="placeholder" 
+                               min="-5" [disabled]="disabled" [required]="required">
+                        <mc-stepper></mc-stepper>
+                    </mc-form-field>
+                
+                    <br><br>
+                
+                    <header>Step = 0.5 </header>
+                    <mc-form-field>
+                        <input mcInput [(ngModel)]="numberValue" type="number"  [placeholder]="placeholder"
+                               step="0.5" [disabled]="disabled" [required]="required">
+                        <mc-stepper></mc-stepper>
+                    </mc-form-field>
+            `,
+        props: {
+            disabled: boolean('disabled', false),
+            required: boolean('required', false),
+            placeholder: text('placeholder', 'placeholder'),
+
+        },
+        moduleMetadata: {
+            imports: [McInputModule, McFormFieldModule, McIconModule, FormsModule]
+        }
+    }));
