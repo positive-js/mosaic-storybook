@@ -17,6 +17,8 @@ storiesOf('Splitter|Splitter', module)
                 }
             </style>
             
+            <h1 class="mc-h1">With direction changing and disabling</h1>
+            
             <mc-splitter 
                 [class.horizontal]="direction === 'horizontal'" 
                 [class.vertical]="direction === 'vertical'"
