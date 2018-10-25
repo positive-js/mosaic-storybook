@@ -15,6 +15,10 @@ import { FormsModule } from '@angular/forms';
 
 
 let newDefaultTime = new Date();
+let timeFormatOptions = {
+    'HH:mm:ss': 'HH:mm:ss',
+    'HH:mm': 'HH:mm'
+};
 
 function myDateKnob(name, defaultValue) {
     const stringTimestamp = date(name, defaultValue);
@@ -42,7 +46,7 @@ storiesOf('Form Controls|Timepicker', module)
             value: myDateKnob('Time value', newDefaultTime),
             isIconVisible: boolean('Show icon', true),
             isDisabled: boolean('Disable', false),
-            timeFormat: select('Time format', ['HH:mm', 'HH:mm:ss'], 'HH:mm')
+            timeFormat: select('Time format', timeFormatOptions, 'HH:mm')
         },
         moduleMetadata: {
             imports: [
