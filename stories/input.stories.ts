@@ -127,7 +127,7 @@ storiesOf('Form Controls|Input', module)
             placeholder: text('placeholder', 'placeholder'),
             max: number('max', 7),
             min: number('min', -5),
-            stop: number('stop', 0.5)
+            step: number('step', 0.5)
         },
         moduleMetadata: {
             imports: [McInputModule, McFormFieldModule, McIconModule, FormsModule]
