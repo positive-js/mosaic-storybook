@@ -62,8 +62,7 @@ storiesOf('Form Controls|Dropdown', module)
 
         `,
         props: {
-            disabled: boolean('disabled', false),
-            disabled: text('dynamicValue', 'test')
+            disabled: boolean('disabled', false)
         },
         moduleMetadata: {
             imports: [McDropdownModule]
