@@ -1,6 +1,7 @@
 import { storiesOf } from '@storybook/angular';
 import { withKnobs, boolean, text } from '@storybook/addon-knobs';
-import { McDropdownModule } from '@ptsecurity/mosaic';
+import { McDropdownModule, McIconModule, McButtonModule } from '@ptsecurity/mosaic';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 storiesOf('Form Controls|Dropdown', module)
@@ -62,10 +63,16 @@ storiesOf('Form Controls|Dropdown', module)
 
         `,
         props: {
-            disabled: boolean('disabled', false)
+            disabled: boolean('disabled', false),
+            dynamicValue: text('dynamicValue', 'test')
         },
         moduleMetadata: {
-            imports: [McDropdownModule]
+            imports: [
+                McDropdownModule,
+                McIconModule,
+                McButtonModule,
+                BrowserAnimationsModule
+            ]
         }
     }));
 
