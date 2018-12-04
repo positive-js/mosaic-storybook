@@ -10,7 +10,7 @@ const modes = {
 const colors = {
     primary: 'primary',
     second: 'second',
-    warn: 'warn'
+    error: 'error'
 };
 
 storiesOf('Indicators|Progress bar', module)
