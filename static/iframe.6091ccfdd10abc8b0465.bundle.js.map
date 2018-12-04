@@ -1,0 +1,1 @@
+{"version":3,"file":"static/iframe.6091ccfdd10abc8b0465.bundle.js","sources":["webpack:///./utils/index.ts"],"sourcesContent":["import { toObj } from './utils';\r\n\r\nexport {\r\n    toObj\r\n}\r\n"],"mappings":"AAAA","sourceRoot":""}
