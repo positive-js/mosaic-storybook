@@ -16,6 +16,10 @@ module.exports = (baseConfig) => {
                 to: 'assets/css/default-theme.css'
             },
             {
+                from: 'node_modules/@ptsecurity/mosaic/prebuilt-themes/dark-theme.css',
+                to: 'assets/css/dark-theme.css'
+            },
+            {
                 from: 'node_modules/@ptsecurity/mosaic/prebuilt-visual/default-visual.css',
                 to: 'assets/css/default-visual.css'
             },
