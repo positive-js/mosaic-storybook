@@ -5,4 +5,4 @@ export const toObj = (array, prefix) =>
             return accumulator;
         },
         {}
-    )
+    );
