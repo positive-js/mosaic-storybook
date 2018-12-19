@@ -47,16 +47,16 @@
  */
 
 /*!
-  * https://github.com/paulmillr/es6-shim
-  * @license es6-shim Copyright 2013-2016 by Paul Miller (http://paulmillr.com)
-  *   and contributors,  MIT License
-  * es6-shim: v0.35.1
-  * see https://github.com/paulmillr/es6-shim/blob/0.35.1/LICENSE
-  * Details and documentation:
-  * https://github.com/paulmillr/es6-shim/
-  */
+ * https://github.com/paulmillr/es6-shim
+ * @license es6-shim Copyright 2013-2016 by Paul Miller (http://paulmillr.com)
+ *   and contributors,  MIT License
+ * es6-shim: v0.35.4
+ * see https://github.com/paulmillr/es6-shim/blob/0.35.3/LICENSE
+ * Details and documentation:
+ * https://github.com/paulmillr/es6-shim/
+ */
 
-/** @license React v16.6.0
+/** @license React v16.6.1
  * react.production.min.js
  *
  * Copyright (c) Facebook, Inc. and its affiliates.
@@ -65,7 +65,7 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-/** @license React v16.6.0
+/** @license React v0.11.3
  * scheduler.production.min.js
  *
  * Copyright (c) Facebook, Inc. and its affiliates.
@@ -101,7 +101,7 @@ object-assign
   All rights reserved.
 */
 
-/** @license React v16.6.0
+/** @license React v16.6.1
  * react-dom.production.min.js
  *
  * Copyright (c) Facebook, Inc. and its affiliates.
