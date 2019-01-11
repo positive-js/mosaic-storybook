@@ -5,19 +5,37 @@ import { BehaviorSubject, Observable, Subscription } from 'rxjs';
 import { FixedSizeVirtualScrollStrategy, ScrollingModule, VIRTUAL_SCROLL_STRATEGY } from '@ptsecurity/cdk/scrolling';
 import { DataSource, ICollectionViewer } from '@ptsecurity/cdk/collections';
 
+import { withAnyInfo } from '../.storybook/addons/ng-info';
+import * as markdown from './cdk-virtual-scroll.stories.md';
+
 
 storiesOf('CDK|Virtual Scroll', module)
+    .addDecorator(withAnyInfo)
+
+    .addParameters({
+        anyinfo: {
+            markdown
+        }
+    })
     .add('Custom Strategy', () => ({
-        component: CdkVirtualScrollCustomStrategyComponent,
         moduleMetadata: {
+            declarations: [ CdkVirtualScrollCustomStrategyComponent ],
             imports: [ ScrollingModule ]
-        }
+        },
+        template: `<cdk-vs-custom-strategy></cdk-vs-custom-strategy>`
     }))
-    .add('Data Source', () => ({
-        component: CdkVirtualScrollDataSourceComponent,
-        moduleMetadata: {
-            imports: [ ScrollingModule ]
+
+    .addParameters({
+        anyinfo: {
+            markdown: ""
         }
+    })
+    .add('Data Source', () => ({
+        moduleMetadata: {
+            declarations: [ CdkVirtualScrollDataSourceComponent ],
+            imports: [ ScrollingModule ]
+        },
+        template: `<cdk-vs-data-source></cdk-vs-data-source>`
     }));
 
 
@@ -28,7 +46,7 @@ export class CustomVirtualScrollStrategy extends FixedSizeVirtualScrollStrategy 
 }
 
 @Component({
-    selector: 'app',
+    selector: 'cdk-vs-custom-strategy',
     styles: [`
         .example-viewport {
             height: 400px;
@@ -102,7 +120,7 @@ export class MyDataSource extends DataSource<string | undefined> {
 
 
 @Component({
-    selector: 'app',
+    selector: 'cdk-vs-data-source',
     styles: [`
         .example-viewport {
             height: 400px;
