@@ -3,9 +3,10 @@
     "version": "0.1.0",
     "license": "MIT",
     "scripts": {
+        "clean": "rimraf ./storybook-static/",
         "start": "start-storybook -p 4300",
         "build": "build-storybook",
-        "deploy": "npm run build && node ./scripts/deploy.js"
+        "deploy": "npm run clean && npm run build && node ./scripts/deploy.js"
     },
     "private": true,
     "dependencies": {
@@ -49,6 +50,7 @@
         "gh-pages": "^1.2.0",
         "highlight.js": "^9.13.1",
         "marked": "^0.6.0",
+        "rimraf": "^2.6.3",
         "ts-node": "~6.0.5",
         "tslint": "~5.11.0",
         "typescript": "~3.1.6"
