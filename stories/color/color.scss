@@ -1,0 +1,65 @@
+@import '~@ptsecurity/mosaic/theming';
+
+.cell {
+    width: 45px;
+}
+.cell-header {
+    text-align: left;
+}
+
+.black-12-opacity{
+    color: $black-12-opacity;
+}
+.black-6-opacity{
+    color: $black-6-opacity;
+}
+.white-12-opacity{
+    color: $white-12-opacity;
+}
+.dark-text-default{
+    color: $dark-text-default;
+}
+.dark-text-secondary{
+    color: $dark-text-secondary;
+}
+.dark-text-disabled{
+    color: $dark-text-disabled;
+}
+.dark-icon-secondary{
+    color: $dark-icon-secondary;
+}
+.light-text-default{
+    color: $light-text-default;
+}
+.light-text-secondary{
+    color: $light-text-secondary;
+}
+.light-text-disabled{
+    color: $light-text-disabled;
+}
+.light-icon-secondary{
+    color: $light-icon-secondary;
+}
+
+$shades: 40, 60, 100, 200, 300, 400, 500, 560, 600, 700, 800, A40, A60, A100, A200, A300, A500;
+
+$colors: (
+    blue: $mc-blue,
+    green: $mc-green,
+    red: $mc-red,
+    yellow: $mc-yellow,
+    grey: $mc-grey
+);
+
+@each $colorName, $colorMap in $colors {
+
+    @each $shade in $shades {
+        .#{$colorName}-#{$shade} {
+            background-color: map-get($colorMap, $shade);
+        }
+        .#{$colorName}-contrast-#{$shade} {
+            background-color: mc-contrast($colorMap, $shade);
+        }
+    }
+
+}
