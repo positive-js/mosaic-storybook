@@ -7,10 +7,24 @@ import { DataSource, ICollectionViewer } from '@ptsecurity/cdk/collections';
 
 import { withAnyInfo } from '../.storybook/addons/ng-info';
 import * as markdown from './cdk-virtual-scroll.stories.md';
+import * as cdkVSBasic from './cdk-virtual-scroll-basic.stories.md';
 
 
 storiesOf('CDK|Virtual Scroll', module)
     .addDecorator(withAnyInfo)
+
+    .addParameters({
+        anyinfo: {
+            markdown: cdkVSBasic
+        }
+    })
+    .add('Basic Virtual Scroll', () => ({
+        moduleMetadata: {
+            declarations: [ CdkVirtualScrollOverviewComponent ],
+            imports: [ ScrollingModule ]
+        },
+        template: '<cdk-virtual-scroll-overview-example></cdk-virtual-scroll-overview-example>'
+    }))
 
     .addParameters({
         anyinfo: {
@@ -22,12 +36,12 @@ storiesOf('CDK|Virtual Scroll', module)
             declarations: [ CdkVirtualScrollCustomStrategyComponent ],
             imports: [ ScrollingModule ]
         },
-        template: `<cdk-vs-custom-strategy></cdk-vs-custom-strategy>`
+        template: '<cdk-vs-custom-strategy></cdk-vs-custom-strategy>'
     }))
 
     .addParameters({
         anyinfo: {
-            markdown: ""
+            markdown: ''
         }
     })
     .add('Data Source', () => ({
@@ -38,6 +52,32 @@ storiesOf('CDK|Virtual Scroll', module)
         template: `<cdk-vs-data-source></cdk-vs-data-source>`
     }));
 
+
+@Component({
+    selector: 'cdk-virtual-scroll-overview-example',
+    styles: [`
+        .example-viewport {
+            height: 400px;
+            width: 400px;
+            border: 1px solid;
+            margin: 8px;
+        }
+
+        .example-item {
+            height: 50px;
+            margin: 0 8px;
+        }
+    `],
+    template: `
+        <cdk-virtual-scroll-viewport itemSize="50" class="example-viewport">
+            <div *cdkVirtualFor="let item of items" class="example-item">{{item}}</div>
+        </cdk-virtual-scroll-viewport>
+    `,
+    changeDetection: ChangeDetectionStrategy.OnPush,
+})
+export class CdkVirtualScrollOverviewComponent {
+    items = Array.from({length: 100000}).map((_, i) => `Banana #${i}`);
+}
 
 export class CustomVirtualScrollStrategy extends FixedSizeVirtualScrollStrategy {
     constructor() {
