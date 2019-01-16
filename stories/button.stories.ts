@@ -1,28 +1,22 @@
 import { storiesOf } from '@storybook/angular';
-import { withCssResources } from '@storybook/addon-cssresources';
 import { boolean, text } from '@storybook/addon-knobs';
 
 import { McButtonModule } from '@ptsecurity/mosaic';
 
+import { withAnyInfo } from '../.storybook/addons/ng-info';
+
+import * as markdown from './button.stories.md';
+
 
 storiesOf('Buttons|Button', module)
-    .addDecorator(
-        withCssResources({
-            cssresources: [
-                {
-                    name: `Light Theme`,
-                    code: `<link rel="stylesheet" type="text/css" href="assets/css/default-theme.css"></link>`,
-                    picked: true,
-                },
-                {
-                    name: `Dark Theme`,
-                    code: `<link rel="stylesheet" type="text/css" href="assets/css/dark-theme.css"></link>`,
-                    picked: false,
-                }
-            ]
-        })
-    )
-    .add('buttons', () => ({
+    .addDecorator(withAnyInfo)
+
+    .addParameters({
+        anyinfo: {
+            markdown
+        }
+    })
+    .add('Buttons', () => ({
         template: `
             <div>
                 <button mc-button color="primary" [disabled]="disabled">{{label_Primary}}</button>

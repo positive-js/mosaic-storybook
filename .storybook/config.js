@@ -3,10 +3,9 @@
 import { configure, addDecorator } from '@storybook/angular';
 import { setOptions } from '@storybook/addon-options';
 import { withKnobs } from '@storybook/addon-knobs';
-import {
-    configureViewport,
-    INITIAL_VIEWPORTS,
-} from '@storybook/addon-viewport';
+import { withCssResources } from '@storybook/addon-cssresources';
+import { configureViewport, INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
+
 import { newViewports } from './viewports-config';
 
 
@@ -18,6 +17,23 @@ setOptions({
 });
 
 addDecorator(withKnobs);
+
+addDecorator(
+    withCssResources({
+        cssresources: [
+            {
+                name: `Light Theme`,
+                code: `<link rel="stylesheet" type="text/css" href="assets/css/default-theme.css"></link>`,
+                picked: true,
+            },
+            {
+                name: `Dark Theme`,
+                code: `<link rel="stylesheet" type="text/css" href="assets/css/dark-theme.css"></link>`,
+                picked: false,
+            }
+        ]
+    })
+);
 
 configureViewport({
     defaultViewport: 'responsive',
