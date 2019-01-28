@@ -2,7 +2,7 @@ import { storiesOf } from '@storybook/angular';
 import { boolean, radios } from '@storybook/addon-knobs';
 import { McSplitterModule } from '@ptsecurity/mosaic';
 
-storiesOf('Splitter|Splitter', module)
+storiesOf('Layout|Splitter', module)
     .add('With direction changing and disabling', () => ({
         template: `
             <style>

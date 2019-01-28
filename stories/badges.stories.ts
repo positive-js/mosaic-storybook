@@ -13,37 +13,37 @@ storiesOf('Indicators|Badges', module)
             <div>
                 <p>
                     <span class="mc-badge">New</span>
-                    <span class="mc-badge mc-badge__caps">in progress</span>
+                    <span class="mc-badge mc-badge_caps">in progress</span>
                 </p>
                 
                 <p>
-                    <span class="mc-badge mc-badge__light">New</span>
-                    <span class="mc-badge mc-badge__light mc-badge__caps">in progress</span>
+                    <span class="mc-badge mc-badge_light">New</span>
+                    <span class="mc-badge mc-badge_light mc-badge_caps">in progress</span>
                 </p>
                 
                 <p>
-                    <span class="mc-badge mc-badge__transparent">New</span>
-                    <span class="mc-badge mc-badge__transparent mc-badge__caps">in progress</span>
+                    <span class="mc-badge mc-badge_transparent">New</span>
+                    <span class="mc-badge mc-badge_transparent mc-badge_caps">in progress</span>
                 </p>
                 
                 <p>
-                    <span class="mc-badge mc-badge__primary">{{badge_text}}</span>
-                    <span class="mc-badge mc-badge__primary mc-badge__caps">{{badge_text_caps}}</span>
+                    <span class="mc-badge mc-badge_primary">{{badge_text}}</span>
+                    <span class="mc-badge mc-badge_primary mc-badge_caps">{{badge_text_caps}}</span>
                 </p>
                 
                 <p>
-                    <span class="mc-badge mc-badge__warning">New</span>
-                    <span class="mc-badge mc-badge__warning mc-badge__caps">in progress</span>
+                    <span class="mc-badge mc-badge_warning">New</span>
+                    <span class="mc-badge mc-badge_warning mc-badge_caps">in progress</span>
                 </p>
                 
                 <p>
-                    <span class="mc-badge mc-badge__error">New</span>
-                    <span class="mc-badge mc-badge__error mc-badge__caps">in progress</span>
+                    <span class="mc-badge mc-badge_error">New</span>
+                    <span class="mc-badge mc-badge_error mc-badge_caps">in progress</span>
                 </p>
                 
                 <p>
-                    <span class="mc-badge mc-badge__success">New</span>
-                    <span class="mc-badge mc-badge__success mc-badge__caps">in progress</span>
+                    <span class="mc-badge mc-badge_success">New</span>
+                    <span class="mc-badge mc-badge_success mc-badge_caps">in progress</span>
                 </p>
             </div>
         `,
