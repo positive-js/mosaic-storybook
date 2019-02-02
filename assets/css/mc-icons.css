@@ -42,12 +42,12 @@ body {
 /* Icons */
 
 
-.mc-angle-L_16 {
+.mc-angle-down-L_16 {
 font-size: 16px;
 
 	
 		}
-		.mc-angle-L_16:before {
+		.mc-angle-down-L_16:before {
 			content:"\f101";
 		
 	
@@ -55,12 +55,12 @@ font-size: 16px;
 
 
 
-.mc-angle-M_16 {
+.mc-angle-down-M_16 {
 font-size: 16px;
 
 	
 		}
-		.mc-angle-M_16:before {
+		.mc-angle-down-M_16:before {
 			content:"\f102";
 		
 	
@@ -68,13 +68,130 @@ font-size: 16px;
 
 
 
-.mc-angle-S_16 {
+.mc-angle-down-S_16 {
 font-size: 16px;
 
 	
 		}
-		.mc-angle-S_16:before {
+		.mc-angle-down-S_16:before {
 			content:"\f103";
+		
+	
+}
+
+
+
+.mc-angle-left-L_16 {
+font-size: 16px;
+
+	
+		}
+		.mc-angle-left-L_16:before {
+			content:"\f11f";
+		
+	
+}
+
+
+
+.mc-angle-left-M_16 {
+font-size: 16px;
+
+	
+		}
+		.mc-angle-left-M_16:before {
+			content:"\f120";
+		
+	
+}
+
+
+
+.mc-angle-left-S_16 {
+font-size: 16px;
+
+	
+		}
+		.mc-angle-left-S_16:before {
+			content:"\f121";
+		
+	
+}
+
+
+
+.mc-angle-right-L_16 {
+font-size: 16px;
+
+	
+		}
+		.mc-angle-right-L_16:before {
+			content:"\f122";
+		
+	
+}
+
+
+
+.mc-angle-right-M_16 {
+font-size: 16px;
+
+	
+		}
+		.mc-angle-right-M_16:before {
+			content:"\f123";
+		
+	
+}
+
+
+
+.mc-angle-right-S_16 {
+font-size: 16px;
+
+	
+		}
+		.mc-angle-right-S_16:before {
+			content:"\f124";
+		
+	
+}
+
+
+
+.mc-angle-up-L_16 {
+font-size: 16px;
+
+	
+		}
+		.mc-angle-up-L_16:before {
+			content:"\f11c";
+		
+	
+}
+
+
+
+.mc-angle-up-M_16 {
+font-size: 16px;
+
+	
+		}
+		.mc-angle-up-M_16:before {
+			content:"\f11d";
+		
+	
+}
+
+
+
+.mc-angle-up-S_16 {
+font-size: 16px;
+
+	
+		}
+		.mc-angle-up-S_16:before {
+			content:"\f11e";
 		
 	
 }
