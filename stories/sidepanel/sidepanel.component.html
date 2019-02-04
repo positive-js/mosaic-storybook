@@ -1,0 +1,38 @@
+<div class="layout-row">
+    <button mc-button color="primary" (click)="openComponentSidepanel()" style="margin-right: 16px;">
+        <span>Open component sidepanel</span>
+    </button>
+
+    <button mc-button color="primary" (click)="openTemplateSidepanel()">
+        <span>Open template sidepanel</span>
+    </button>
+</div>
+
+<ng-template>
+    <mc-sidepanel-header [closeable]="true">
+        Sidepanel Template Header
+    </mc-sidepanel-header>
+    <mc-sidepanel-body class="layout-padding">
+        <div class="mc-subheading">Sidepanel Template Body</div>
+
+        <div>
+            Sidepanel Content
+        </div>
+    </mc-sidepanel-body>
+    <mc-sidepanel-footer>
+        <mc-sidepanel-actions align="left">
+            <button mc-button color="primary" (click)="openTemplateSidepanel()">
+                <span>Open another sidepanel</span>
+            </button>
+        </mc-sidepanel-actions>
+        <mc-sidepanel-actions align="right">
+            <button mc-button color="primary" (click)="openTemplateSidepanel()">
+                <span>Open another sidepanel</span>
+            </button>
+
+            <button mc-button color="second" mc-sidepanel-close>
+                <span>Close</span>
+            </button>
+        </mc-sidepanel-actions>
+    </mc-sidepanel-footer>
+</ng-template>
