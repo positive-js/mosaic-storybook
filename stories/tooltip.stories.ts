@@ -11,6 +11,8 @@ import {
     McInputModule
 } from '@ptsecurity/mosaic';
 
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+
 
 @Component({
     selector: 'app',
@@ -251,18 +253,34 @@ storiesOf('Popups & Modals|Tooltip', module)
     .add('Tooltip on focus', () => ({
         component: TooltipDemoComponentFocus,
         moduleMetadata: {
-            imports: [McToolTipModule, McButtonModule]
+            imports: [
+                McToolTipModule,
+                McButtonModule,
+                BrowserAnimationsModule
+            ]
         }
     }))
     .add('Tooltip on hover', () => ({
         component: TooltipDemoComponentHover,
         moduleMetadata: {
-            imports: [McToolTipModule, McButtonModule, McInputModule, McFormFieldModule, McIconModule, FormsModule]
+            imports: [
+                McToolTipModule,
+                McButtonModule,
+                McInputModule,
+                McFormFieldModule,
+                McIconModule,
+                FormsModule,
+                BrowserAnimationsModule
+            ]
         }
     }))
     .add('Tooltip with manual trigger', () => ({
         component: TooltipDemoComponentManualTrigger,
         moduleMetadata: {
-            imports: [McButtonModule, McToolTipModule]
+            imports: [
+                McButtonModule,
+                McToolTipModule,
+                BrowserAnimationsModule
+            ]
         }
     }));
