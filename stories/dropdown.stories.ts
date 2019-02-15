@@ -13,7 +13,7 @@ storiesOf('Form Controls|Dropdown', module)
                     <button mc-button>dropdown</button>
             
                     <button mc-icon-button [mcDropdownTriggerFor]="appDropdown">
-                        <i mc-icon="mc-angle-L_16"></i>
+                        <i mc-icon="mc-angle-down-L_16"></i>
                     </button>
                 </span>
             
@@ -21,7 +21,7 @@ storiesOf('Form Controls|Dropdown', module)
             
                 <button mc-icon-button [mcDropdownTriggerFor]="appDropdown">
                     dropdown
-                    <i mc-icon="mc-angle-L_16"></i>
+                    <i mc-icon="mc-angle-down-L_16"></i>
                 </button>
             
                 <br>
@@ -47,7 +47,7 @@ storiesOf('Form Controls|Dropdown', module)
             
                 <button mc-icon-button [mcDropdownTriggerFor]="appDropdownLazy" [mcDropdownTriggerData]="{dynamicValue: dynamicValue}">
                     dropdown lazy
-                    <i mc-icon="mc-angle-L_16"></i>
+                    <i mc-icon="mc-angle-down-L_16"></i>
                 </button>
             
                 <mc-dropdown #appDropdownLazy="mcDropdown">
