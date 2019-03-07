@@ -3,11 +3,12 @@ const path = require('path');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 
-module.exports = (baseConfig) => {
+module.exports = ({ config }) => {
     // Extend defaultConfig as you need.
 
     // For example, add typescript loader:
     console.log('=====================');
+    const baseConfig = config;
 
     baseConfig.plugins.push(
         new CopyWebpackPlugin([

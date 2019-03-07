@@ -24,8 +24,8 @@
         "@ptsecurity/mosaic-icons": "2.7.1",
         "@ptsecurity/mosaic-moment-adapter": "github:positive-js/mosaic-moment-adapter-builds",
         "core-js": "^2.6.1",
-        "moment": "^2.24.0",
         "messageformat": "^2.0.5",
+        "moment": "^2.24.0",
         "rxjs": "^6.3.3",
         "zone.js": "^0.8.26"
     },
@@ -36,16 +36,17 @@
         "@angular/language-service": "~7.2.1",
         "@babel/core": "^7.2.0",
         "@ptsecurity/tslint-config": "^0.10.1",
-        "@storybook/addon-actions": "4.2.0-alpha.11",
-        "@storybook/addon-cssresources": "4.2.0-alpha.11",
-        "@storybook/addon-knobs": "4.2.0-alpha.11",
-        "@storybook/addon-links": "4.2.0-alpha.11",
-        "@storybook/addon-notes": "4.2.0-alpha.11",
-        "@storybook/addon-options": "4.2.0-alpha.11",
-        "@storybook/addon-storysource": "4.2.0-alpha.11",
-        "@storybook/addon-viewport": "4.2.0-alpha.11",
-        "@storybook/addons": "4.2.0-alpha.11",
-        "@storybook/angular": "4.2.0-alpha.11",
+        "@storybook/addon-actions": "^5.0.0",
+        "@storybook/addon-cssresources": "^5.0.0",
+        "@storybook/addon-knobs": "^5.0.0",
+        "@storybook/addon-links": "^5.0.0",
+        "@storybook/addon-notes": "^5.0.0",
+        "@storybook/addon-options": "^5.0.0",
+        "@storybook/addon-storysource": "^5.0.0",
+        "@storybook/addon-viewport": "^5.0.0",
+        "@storybook/addons": "^5.0.0",
+        "@storybook/angular": "^5.0.0",
+        "@storybook/theming": "^5.0.0",
         "@types/node": "^10.12.8",
         "babel-loader": "^8.0.4",
         "copy-webpack-plugin": "^4.5.4",
@@ -57,8 +58,5 @@
         "ts-node": "~6.0.5",
         "tslint": "~5.11.0",
         "typescript": "~3.2.4"
-    },
-    "resolutions": {
-        "terser": "3.14.1"
     }
 }

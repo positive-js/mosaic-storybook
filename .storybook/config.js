@@ -1,7 +1,7 @@
 /* eslint-disable import/no-extraneous-dependencies, import/no-unresolved, import/extensions */
 
-import { configure, addDecorator } from '@storybook/angular';
-import { setOptions } from '@storybook/addon-options';
+import { configure, addDecorator, addParameters } from '@storybook/angular';
+import { create } from '@storybook/theming';
 import { withKnobs } from '@storybook/addon-knobs';
 import { withCssResources } from '@storybook/addon-cssresources';
 import { configureViewport, INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
@@ -9,30 +9,36 @@ import { configureViewport, INITIAL_VIEWPORTS } from '@storybook/addon-viewport'
 import { newViewports } from './viewports-config';
 
 
-setOptions({
-    name: 'PT Mosaic',
-    sortStoriesByKind: true,
-    hierarchySeparator: /\//,
-    hierarchyRootSeparator: /\|/
+addParameters({
+    options: {
+        theme: create({
+            base: 'light',
+            brandTitle: 'PT Mosaic',
+            brandUrl: 'https://github.com/positive-js/mosaic/',
+            brandImage: 'https://i.ibb.co/p0zh3sb/logo-png-48.png'
+        }),
+        isFullscreen: false
+    }
 });
 
 addDecorator(withKnobs);
 
-addDecorator(
-    withCssResources({
+addDecorator(withCssResources);
+addParameters(
+    {
         cssresources: [
             {
-                name: `Light Theme`,
+                id: `Light Theme`,
                 code: `<link rel="stylesheet" type="text/css" href="assets/css/default-theme.css"></link>`,
                 picked: true,
             },
             {
-                name: `Dark Theme`,
+                id: `Dark Theme`,
                 code: `<link rel="stylesheet" type="text/css" href="assets/css/dark-theme.css"></link>`,
                 picked: false,
             }
         ]
-    })
+    }
 );
 
 configureViewport({
