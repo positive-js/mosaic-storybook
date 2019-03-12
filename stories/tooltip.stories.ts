@@ -180,38 +180,35 @@ export class TooltipDemoComponentHover {}
     selector: 'app',
     template: `
         <section class="container flex-100 layout-row layout-align-center-center">
-            <div class="flex layout-row layout-align-center-center">
-                <div class="flex layout-column layout-align-center-center">
-                    <div class="flex layout-padding-50">
-                        <span> Mouse over to </span>
-                        <button mc-button
-                                (mouseenter)="tooltip.show()"
-                                aria-label="Button that progamatically shows a tooltip on another button"
-                                class="container-item-button">
-                            show
-                        </button>
-                        <button mc-button
-                                (mouseenter)="tooltip.hide()"
-                                aria-label="Button that progamatically hides a tooltip on another button"
-                                class="container-item-button">
-                            hide
-                        </button>
-                    </div>
+            <div class="flex layout-row layout-align-start-center">
+                <span> Mouse over to </span>
+                <button mc-button
+                        (mouseenter)="tooltip.show()"
+                        aria-label="Button that progamatically shows a tooltip on another button"
+                        class="container-item-button">
+                    show
+                </button>
+                <button mc-button
+                        (mouseenter)="tooltip.hide()"
+                        aria-label="Button that progamatically hides a tooltip on another button"
+                        class="container-item-button">
+                    hide
+                </button>
+            </div>
 
-                    <button mc-button 
-                            class="container-item-button" 
-                            #tooltip="mcTooltip"
-                            mcTooltip
-                            (click)="toggleTooltip(tooltip)"
-                            mcTitle="Info about the action"
-                            mcTrigger="manual"
-                            mcPlacement="bottom">
-                        Click to toggle tooltip
-                    </button>
-                </div>
+            <div class="flex">
+                <button mc-button 
+                        class="container-item-button" 
+                        #tooltip="mcTooltip"
+                        mcTooltip
+                        (click)="toggleTooltip(tooltip)"
+                        mcTitle="Info about the action"
+                        mcTrigger="manual"
+                        mcPlacement="bottom">
+                    Click to toggle tooltip
+                </button>
             </div>
         </section>
-
     `,
     styles: [`
         .container {
