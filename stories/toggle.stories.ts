@@ -1,6 +1,7 @@
 import { storiesOf } from '@storybook/angular';
 import { withKnobs, boolean } from '@storybook/addon-knobs';
 import { McToggleModule } from '@ptsecurity/mosaic';
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 
 
 storiesOf('Form Controls|Toggle', module)
@@ -49,7 +50,7 @@ storiesOf('Form Controls|Toggle', module)
             disabled: boolean('disabled', false)
         },
         moduleMetadata: {
-            imports: [McToggleModule]
+            imports: [BrowserAnimationsModule, McToggleModule]
         }
     }));
 
