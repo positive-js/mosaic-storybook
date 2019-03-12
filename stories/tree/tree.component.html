@@ -1,18 +1,17 @@
 <mc-tree-selection
-    auto-select="false"
     [dataSource]="dataSource"
     [treeControl]="treeControl"
     (navigationChange)="onNavigationChange($event)"
     (selectionChange)="onSelectionChange($event)">
 
-    <mc-tree-node-option *mcTreeNodeDef="let node" mcTreeNodePadding>
+    <mc-tree-option *mcTreeNodeDef="let node" mcTreeNodePadding>
         {{ node.name }}
-    </mc-tree-node-option>
+    </mc-tree-option>
 
-    <mc-tree-node-option *mcTreeNodeDef="let node; when: hasChild" mcTreeNodePadding>
+    <mc-tree-option *mcTreeNodeDef="let node; when: hasChild" mcTreeNodePadding>
         <i mc-icon="mc-angle-down-S_16" [style.transform]="treeControl.isExpanded(node) ? '' : 'rotate(-90deg)'" cdkTreeNodeToggle></i>
         {{ node.name }} : {{ node.type }}
-    </mc-tree-node-option>
+    </mc-tree-option>
 </mc-tree-selection>
 
 <p>multipleSelected: {{ multipleSelected }}</p>
