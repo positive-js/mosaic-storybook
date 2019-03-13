@@ -6,7 +6,7 @@ import {
 } from '@ptsecurity/mosaic';
 
 
-storiesOf('Navigation|Tabs', module)
+storiesOf('Layout|Tabs', module)
     .add('Tab group', () => ({
         template: `
             <div [dir]="disabled ? 'rtl' : 'ltr'">
