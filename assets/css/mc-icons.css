@@ -146,6 +146,19 @@ font-size: 16px;
 
 
 
+.mc-angle-right-M_32 {
+font-size: 32px;
+
+	
+		}
+		.mc-angle-right-M_32:before {
+			content:"\f128";
+		
+	
+}
+
+
+
 .mc-angle-right-S_16 {
 font-size: 16px;
 
@@ -192,6 +205,19 @@ font-size: 16px;
 		}
 		.mc-angle-up-S_16:before {
 			content:"\f11e";
+		
+	
+}
+
+
+
+.mc-bell_32 {
+font-size: 32px;
+
+	
+		}
+		.mc-bell_32:before {
+			content:"\f125";
 		
 	
 }
@@ -257,6 +283,19 @@ font-size: 16px;
 		}
 		.mc-close-L_16:before {
 			content:"\f108";
+		
+	
+}
+
+
+
+.mc-close-L_32 {
+font-size: 32px;
+
+	
+		}
+		.mc-close-L_32:before {
+			content:"\f127";
 		
 	
 }
@@ -393,6 +432,19 @@ font-size: 16px;
 
 
 
+.mc-hamburger_32 {
+font-size: 32px;
+
+	
+		}
+		.mc-hamburger_32:before {
+			content:"\f126";
+		
+	
+}
+
+
+
 .mc-info_16 {
 font-size: 16px;
 
@@ -471,13 +523,26 @@ font-size: 16px;
 
 
 
-.mc-triangle_16 {
+.mc-triangle-down_16 {
 font-size: 16px;
 
 	
 		}
-		.mc-triangle_16:before {
+		.mc-triangle-down_16:before {
 			content:"\f113";
+		
+	
+}
+
+
+
+.mc-triangle-up_16 {
+font-size: 16px;
+
+	
+		}
+		.mc-triangle-up_16:before {
+			content:"\f129";
 		
 	
 }
