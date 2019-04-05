@@ -21,7 +21,7 @@
         "@angular/router": "~7.2.1",
         "@ptsecurity/cdk": "github:positive-js/cdk-builds",
         "@ptsecurity/mosaic": "github:positive-js/mosaic-builds",
-        "@ptsecurity/mosaic-icons": "2.7.1",
+        "@ptsecurity/mosaic-icons": "2.8.0",
         "@ptsecurity/mosaic-moment-adapter": "github:positive-js/mosaic-moment-adapter-builds",
         "core-js": "^2.6.1",
         "messageformat": "^2.0.5",
