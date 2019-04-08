@@ -1,7 +1,7 @@
 import {storiesOf} from '@storybook/angular';
 import {boolean, text} from '@storybook/addon-knobs';
 
-import {McButtonToggleModule} from '@ptsecurity/mosaic';
+import {McButtonToggleModule, McIconModule} from '@ptsecurity/mosaic';
 
 import {withAnyInfo} from '../.storybook/addons/ng-info';
 
@@ -22,7 +22,7 @@ storiesOf('Buttons|Button Toggle', module)
                 <mc-button-toggle value="1">
                     default 1
                 </mc-button-toggle>
-                <mc-button-toggle value="2" disabled>
+                <mc-button-toggle value="2" [disabled]="disabled">
                     default 2
                 </mc-button-toggle>
                 <mc-button-toggle value="3">
@@ -44,9 +44,9 @@ storiesOf('Buttons|Button Toggle', module)
         `,
         props: {
             disabled: boolean('disabled', false),
-            modelResult: text('Model result', '1')
+            modelResult: text('Model Result', '1')
         },
         moduleMetadata: {
-            imports: [McButtonToggleModule]
+            imports: [McIconModule, McButtonToggleModule]
         }
     }));
