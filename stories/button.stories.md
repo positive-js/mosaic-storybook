@@ -2,8 +2,7 @@ Mosaic buttons are available using native `<button>` or `<a>` elements.
 
 ### Variants
 There are two button variants, each applied as an attribute:  
-+ basic buttons without icons (`mc-button`)
-+ icon buttons (`mc-icon-button`)
++ basic buttons
 
 #### Basic buttons
 
@@ -18,7 +17,7 @@ Icon buttons consist of an icon and can contain text.
 To create an icon button, add the `<i mc-icon="icon_name"></i>` element within `<button c-icon-button>` where `"icon_name"` is the name of a [Mosaic icon](https://github.com/positive-js/mosaic-icons). For example:
 
 ```
-<button mc-icon-button>
+<button mc-button>
         <i mc-icon="mc-close-S_16"></i>
     </button>
 ```
@@ -27,7 +26,7 @@ To create an icon button, add the `<i mc-icon="icon_name"></i>` element within `
 Add any text before or after the `<i>` element to place a button label to the right or to the left of the icon.
 
 ```
-<button mc-icon-button>
+<button mc-button>
         <i mc-icon="mc-play_16"></i>
         Click me
     </button>
