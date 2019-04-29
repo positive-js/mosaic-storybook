@@ -9,7 +9,7 @@ import {
     McIconModule
 } from '@ptsecurity/mosaic';
 import { FormControl, ReactiveFormsModule, Validators } from '@angular/forms';
-import {startWith, map} from "rxjs/operators";
+import {startWith, map} from 'rxjs/operators';
 
 
 const options = [
