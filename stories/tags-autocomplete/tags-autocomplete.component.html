@@ -1,0 +1,22 @@
+<div>
+    <mc-form-field class="example-chip-list">
+        <mc-tag-list #autocompleteTagList>
+            <mc-tag *ngFor="let tag of autocompleteSelectedTags" [value]="tag" (removed)="onRemove(tag)">
+                {{ tag }}
+                <i mc-icon="mc-close-S_16" mcTagRemove></i>
+            </mc-tag>
+            <input placeholder="New tag..."
+                   #autocompleteTagInput
+                   [formControl]="tagCtrl"
+                   [mcAutocomplete]="autocomplete"
+                   [mcTagInputFor]="autocompleteTagList"
+                   (mcTagInputTokenEnd)="onCreate($event)">
+        </mc-tag-list>
+        <mc-autocomplete #autocomplete (optionSelected)="onSelect($event)">
+            <mc-option *ngIf="autocompleteTagInput.value" [value]="{ new: true, value: autocompleteTagInput.value }">
+                Создать: {{ autocompleteTagInput.value }}
+            </mc-option>
+            <mc-option *ngFor="let tag of autocompleteFilteredTags | async" [value]="tag">{{ tag }}</mc-option>
+        </mc-autocomplete>
+    </mc-form-field>
+</div>
