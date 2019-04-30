@@ -1,5 +1,5 @@
 import { storiesOf } from '@storybook/angular';
-import { withKnobs, array, boolean, text, object } from '@storybook/addon-knobs';
+import { withKnobs } from '@storybook/addon-knobs';
 import { action } from '@storybook/addon-actions';
 
 import { McIconModule, McTreeModule } from '@ptsecurity/mosaic';

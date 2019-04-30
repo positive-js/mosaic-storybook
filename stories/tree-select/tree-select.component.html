@@ -1,0 +1,31 @@
+<div>
+    <mc-form-field>
+        <mc-tree-select
+            placeholder="Food I want to eat right now"
+            [disabled]="disabled"
+            [formControl]="control"
+            (selectionChange)="onSelectionChange($event)"
+            [value]="singleSelected">
+
+            <mc-tree-selection
+                [dataSource]="dataSource"
+                [treeControl]="treeControl">
+                <mc-tree-option
+                    *mcTreeNodeDef="let node"
+                    mcTreeNodePadding
+                    [value]="node.name">
+                    {{ node.name }}
+                </mc-tree-option>
+
+                <mc-tree-option
+                    *mcTreeNodeDef="let node; when: hasChild"
+                    mcTreeNodePadding
+                    [disabled]="node.name === disabledItemName"
+                    [value]="node.name">
+                    <i mc-icon="mc-angle-down-S_16" [style.transform]="treeControl.isExpanded(node) ? '' : 'rotate(-90deg)'" mcTreeNodeToggle></i>
+                    {{ node.name }} : {{ node.type }}
+                </mc-tree-option>
+            </mc-tree-selection>
+        </mc-tree-select>
+    </mc-form-field>
+</div>
