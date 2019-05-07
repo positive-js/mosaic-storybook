@@ -1,8 +1,15 @@
 import { storiesOf } from '@storybook/angular';
-import { boolean, text } from '@storybook/addon-knobs';
+import { withAnyInfo } from '../.storybook/addons/ng-info';
+import * as markdown from './typography.stories.md';
 
 
 storiesOf('Styles|Typography', module)
+    .addDecorator(withAnyInfo)
+    .addParameters({
+        anyinfo: {
+            markdown
+        }
+    })
     .add('Display and Headers', () => ({
         template: `
             <style>
