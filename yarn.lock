@@ -1047,8 +1047,8 @@
     esquery "^1.0.1"
 
 "@ptsecurity/cdk@github:positive-js/cdk-builds":
-  version "1.0.0-beta.5-e0b4ccd"
-  resolved "https://codeload.github.com/positive-js/cdk-builds/tar.gz/b86984e13fa5b964f058c27f6a4b1c781b91fc4e"
+  version "1.0.0-beta.5-b05d86e"
+  resolved "https://codeload.github.com/positive-js/cdk-builds/tar.gz/5055cc48ab49382d50a8552480ea6be3e13485e3"
   dependencies:
     tslib "^1.7.1"
 
@@ -1058,14 +1058,14 @@
   integrity sha512-RaZnXCm4SpG8Zv/JJqH1DaRW3MiJfuRhBilJBKEmFDIsguspC+Xh+kNhEMu5SbYtB/PiY4tIqGXh6HZfAGIVnw==
 
 "@ptsecurity/mosaic-moment-adapter@github:positive-js/mosaic-moment-adapter-builds":
-  version "1.0.0-beta.5-e0b4ccd"
-  resolved "https://codeload.github.com/positive-js/mosaic-moment-adapter-builds/tar.gz/e473d0e39754c2385b4ab8b37402da51a88d782a"
+  version "1.0.0-beta.5-b05d86e"
+  resolved "https://codeload.github.com/positive-js/mosaic-moment-adapter-builds/tar.gz/9b1c6fe80b1c18d984fa0da5bc8cd5f9c7e6b093"
   dependencies:
     tslib "^1.7.1"
 
 "@ptsecurity/mosaic@github:positive-js/mosaic-builds":
-  version "1.0.0-beta.5-e0b4ccd"
-  resolved "https://codeload.github.com/positive-js/mosaic-builds/tar.gz/e803d993cff4f1ddddc08e45f7f91b5e862f6b63"
+  version "1.0.0-beta.5-b05d86e"
+  resolved "https://codeload.github.com/positive-js/mosaic-builds/tar.gz/90a51dbd4780db7e56ba54d3bb0a15c45fe6873f"
   dependencies:
     tslib "^1.7.1"
 
