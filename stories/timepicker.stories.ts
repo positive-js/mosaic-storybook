@@ -11,6 +11,7 @@ import {
     McFormFieldModule,
     McIconModule
 } from '@ptsecurity/mosaic';
+import { McMomentDateModule } from '@ptsecurity/mosaic-moment-adapter';
 import { FormsModule } from '@angular/forms';
 
 
@@ -54,7 +55,8 @@ storiesOf('Form Controls|Timepicker', module)
                 McTimepickerModule,
                 McInputModule,
                 McFormFieldModule,
-                McIconModule
+                McIconModule,
+                McMomentDateModule
             ]
         }
     }))
@@ -86,7 +88,8 @@ storiesOf('Form Controls|Timepicker', module)
                 McTimepickerModule,
                 McInputModule,
                 McFormFieldModule,
-                McIconModule
+                McIconModule,
+                McMomentDateModule
             ]
         }
     }));
