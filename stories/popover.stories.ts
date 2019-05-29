@@ -221,7 +221,7 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
                 mc-button
                 color="second"
                 mcPopover
-                mcPopoverTrigger="hover"
+                mcPopoverTrigger="manual"
                 mcPopoverClass="popover-485 this-class-not-available"
                 [mcPopoverVisible]="isPopoverVisibleTop"
                 mcPopoverHeader="Lorem ipsum"
@@ -241,7 +241,6 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
                 mcPopoverClass="popover-485 this-class-not-available"
                 [mcPopoverVisible]="isPopoverVisibleTopRight"
                 mcPopoverHeader="Lorem ipsum"
-                mcPopoverTrigger="manual"
                 mcPopoverPlacement="topRight"
                 [mcPopoverContent]="customContent"
                 [mcPopoverFooter]="customFooter"
@@ -263,7 +262,7 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
             padding: 0 10%;
         }
         
-        .mc-button {
+        .mc-button:not(.step) {
             margin: 50px !important;
         }
         
