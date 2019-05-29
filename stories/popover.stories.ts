@@ -61,7 +61,7 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
                 bottomLeft large
             </button>
             <button
-                class="trigger-button with-margin asdasd"
+                class="trigger-button with-margin"
                 mc-button
                 color="second"
                 mcPopover
@@ -78,7 +78,7 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
                 bottom small
             </button>
             <button
-                class="with-margin"
+                class="trigger-button with-margin"
                 mc-button
                 color="second"
                 mcPopover
@@ -98,7 +98,7 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
         <section class="flex layout-row layout-align-stretch-center left-right-case">
             <section class="flex layout-column layout-align-space-between-start">
                 <button
-                    class="trigger-button"
+                    class="trigger-button with-margin"
                     mc-button
                     color="second"
                     mcPopover
@@ -114,7 +114,7 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
                     rightTop
                 </button>
                 <button
-                    class="trigger-button"
+                    class="trigger-button with-margin"
                     mc-button
                     color="second"
                     mcPopover
@@ -130,6 +130,7 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
                     right
                 </button>
                 <button
+                    class="trigger-button with-margin"
                     mc-button
                     color="second"
                     mcPopover
@@ -148,7 +149,7 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 
             <section class="flex layout-column layout-align-space-between-end">
                 <button
-                    class="trigger-button"
+                    class="trigger-button with-margin"
                     mc-button
                     color="second"
                     mcPopover
@@ -164,7 +165,7 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
                     leftTop
                 </button>
                 <button
-                    class="trigger-button"
+                    class="trigger-button with-margin"
                     mc-button
                     color="second"
                     mcPopover
@@ -180,7 +181,7 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
                     left
                 </button>
                 <button
-                    class="trigger-button"
+                    class="trigger-button with-margin"
                     mc-button
                     color="second"
                     mcPopover
@@ -262,8 +263,8 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
             padding: 0 10%;
         }
         
-        .mc-button:not(.step) {
-            margin: 50px !important;
+        .trigger-button.with-margin {
+            margin: 50px;
         }
         
         .bottom-case {
@@ -449,7 +450,7 @@ export class PopoverManualTriggerStoriesComponent {
                 bottomLeft large
             </button>
             <button
-                class="trigger-button with-margin asdasd"
+                class="trigger-button with-margin"
                 mc-button
                 color="second"
                 mcPopover
@@ -463,7 +464,7 @@ export class PopoverManualTriggerStoriesComponent {
                 bottom small
             </button>
             <button
-                class="with-margin"
+                class="trigger-button with-margin"
                 mc-button
                 color="second"
                 mcPopover
@@ -480,7 +481,7 @@ export class PopoverManualTriggerStoriesComponent {
         <section class="flex layout-row layout-align-stretch-center left-right-case">
             <section class="flex layout-column layout-align-space-between-start">
                 <button
-                    class="trigger-button"
+                    class="trigger-button with-margin"
                     mc-button
                     color="second"
                     mcPopover
@@ -493,7 +494,7 @@ export class PopoverManualTriggerStoriesComponent {
                     rightTop
                 </button>
                 <button
-                    class="trigger-button"
+                    class="trigger-button with-margin"
                     mc-button
                     color="second"
                     mcPopover
@@ -506,6 +507,7 @@ export class PopoverManualTriggerStoriesComponent {
                     right
                 </button>
                 <button
+                    class="trigger-button with-margin"
                     mc-button
                     color="second"
                     mcPopover
@@ -521,7 +523,7 @@ export class PopoverManualTriggerStoriesComponent {
 
             <section class="flex layout-column layout-align-space-between-end">
                 <button
-                    class="trigger-button"
+                    class="trigger-button with-margin"
                     mc-button
                     color="second"
                     mcPopover
@@ -534,7 +536,7 @@ export class PopoverManualTriggerStoriesComponent {
                     leftTop
                 </button>
                 <button
-                    class="trigger-button"
+                    class="trigger-button with-margin"
                     mc-button
                     color="second"
                     mcPopover
@@ -547,7 +549,7 @@ export class PopoverManualTriggerStoriesComponent {
                     left
                 </button>
                 <button
-                    class="trigger-button"
+                    class="trigger-button with-margin"
                     mc-button
                     color="second"
                     mcPopover
@@ -616,9 +618,9 @@ export class PopoverManualTriggerStoriesComponent {
             align-items: stretch;
             padding: 0 10%;
         }
-        
-        .mc-button {
-            margin: 50px !important;
+
+        .trigger-button.with-margin {
+            margin: 50px;
         }
         
         .bottom-case {
@@ -676,7 +678,7 @@ export class PopoverFocusTriggerStoriesComponent {
                 bottomLeft large
             </button>
             <button
-                class="trigger-button with-margin asdasd"
+                class="trigger-button with-margin"
                 mc-button
                 color="second"
                 mcPopover
@@ -689,7 +691,7 @@ export class PopoverFocusTriggerStoriesComponent {
                 bottom small
             </button>
             <button
-                class="with-margin"
+                class="trigger-button with-margin"
                 mc-button
                 color="second"
                 mcPopover
@@ -705,7 +707,7 @@ export class PopoverFocusTriggerStoriesComponent {
         <section class="flex layout-row layout-align-stretch-center left-right-case">
             <section class="flex layout-column layout-align-space-between-start">
                 <button
-                    class="trigger-button"
+                    class="trigger-button with-margin"
                     mc-button
                     color="second"
                     mcPopover
@@ -717,7 +719,7 @@ export class PopoverFocusTriggerStoriesComponent {
                     rightTop
                 </button>
                 <button
-                    class="trigger-button"
+                    class="trigger-button with-margin"
                     mc-button
                     color="second"
                     mcPopover
@@ -729,6 +731,7 @@ export class PopoverFocusTriggerStoriesComponent {
                     right
                 </button>
                 <button
+                    class="trigger-button with-margin"
                     mc-button
                     color="second"
                     mcPopover
@@ -743,7 +746,7 @@ export class PopoverFocusTriggerStoriesComponent {
 
             <section class="flex layout-column layout-align-space-between-end">
                 <button
-                    class="trigger-button"
+                    class="trigger-button with-margin"
                     mc-button
                     color="second"
                     mcPopover
@@ -755,7 +758,7 @@ export class PopoverFocusTriggerStoriesComponent {
                     leftTop
                 </button>
                 <button
-                    class="trigger-button"
+                    class="trigger-button with-margin"
                     mc-button
                     color="second"
                     mcPopover
@@ -767,7 +770,7 @@ export class PopoverFocusTriggerStoriesComponent {
                     left
                 </button>
                 <button
-                    class="trigger-button"
+                    class="trigger-button with-margin"
                     mc-button
                     color="second"
                     mcPopover
@@ -807,7 +810,7 @@ export class PopoverFocusTriggerStoriesComponent {
                 top hover
             </button>
             <button
-                class="with-margin"
+                class="trigger-button with-margin"
                 mc-button
                 color="second"
                 mcPopover
@@ -831,9 +834,9 @@ export class PopoverFocusTriggerStoriesComponent {
             align-items: stretch;
             padding: 0 10%;
         }
-        
-        .mc-button {
-            margin: 50px !important;
+
+        .trigger-button.with-margin {
+            margin: 50px;
         }
         
         .bottom-case {
