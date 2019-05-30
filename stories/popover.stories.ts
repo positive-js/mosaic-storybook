@@ -599,7 +599,6 @@ export class PopoverManualTriggerStoriesComponent {
                 mcPopoverTrigger="focus"
                 mcPopoverClass="popover-485 this-class-not-available"
                 mcPopoverHeader="Lorem ipsum"
-                mcPopoverTrigger="manual"
                 mcPopoverPlacement="topRight"
                 [mcPopoverContent]="customContent"
                 [mcPopoverFooter]="customFooter">
