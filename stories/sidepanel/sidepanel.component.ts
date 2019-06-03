@@ -1,4 +1,4 @@
-import { Component, Inject, Input, TemplateRef, ViewChild, ViewEncapsulation } from '@angular/core';
+import { Component, Inject, Input, TemplateRef, ViewChild, ViewEncapsulation, OnDestroy } from '@angular/core';
 import { MC_SIDEPANEL_DATA, McSidepanelPosition, McSidepanelService } from '@ptsecurity/mosaic';
 
 
@@ -7,7 +7,7 @@ import { MC_SIDEPANEL_DATA, McSidepanelPosition, McSidepanelService } from '@pts
     templateUrl: './sidepanel.component.html',
     encapsulation: ViewEncapsulation.None
 })
-export class SidepanelDemoComponent {
+export class SidepanelDemoComponent implements OnDestroy {
     @Input() position: McSidepanelPosition;
     @Input() hasBackdrop: boolean;
     @Input() disableClose: boolean;
@@ -15,6 +15,13 @@ export class SidepanelDemoComponent {
     @ViewChild(TemplateRef) template: TemplateRef<any>;
 
     constructor(private sidepanelService: McSidepanelService) {}
+
+    ngOnDestroy() {
+        const overlayContainer = document.querySelector('.cdk-overlay-container');
+        if (overlayContainer) {
+            overlayContainer.remove();
+        }
+    }
 
     openComponentSidepanel() {
         this.sidepanelService.open(ExampleSidepanelComponent, {

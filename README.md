@@ -4,7 +4,7 @@ Repo showing off [Mosaic](https://github.com/positive-js/mosaic) components in [
 ## Local Setup
 
 ```
-$ npm install
-$ npm start
+$ yarn
+$ yarn start
 ```
 Open [http://localhost:4300](http://localhost:4300)
