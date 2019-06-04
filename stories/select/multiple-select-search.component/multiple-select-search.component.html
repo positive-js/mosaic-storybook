@@ -1,0 +1,15 @@
+<h5 class="mc-title">Multiselect with search</h5>
+<div style="width: 400px">
+    <mc-form-field>
+        <mc-select multiple [(value)]="multipleSelectedWithSearch">
+            <mc-form-field mcFormFieldWithoutBorders mcSelectSearch>
+                <i mcPrefix mc-icon="mc-search_16"></i>
+                <input mcInput [formControl]="multipleSearchCtrl" type="text" placeholder="Search" />
+                <mc-cleaner></mc-cleaner>
+            </mc-form-field>
+
+            <mc-option value="StickedOption">Sticked Option</mc-option>
+            <mc-option *ngFor="let option of filteredMultipleOptions | async" [value]="option">{{ option }}</mc-option>
+        </mc-select>
+    </mc-form-field>
+</div>

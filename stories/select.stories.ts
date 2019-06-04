@@ -1,9 +1,12 @@
 import { storiesOf } from '@storybook/angular';
-import { withKnobs, array, boolean, text, object } from '@storybook/addon-knobs';
+import { withKnobs, object } from '@storybook/addon-knobs';
 import { action } from '@storybook/addon-actions';
 
-import { McSelectModule } from '@ptsecurity/mosaic';
+import {McButtonModule, McFormFieldModule, McIconModule, McInputModule, McSelectModule} from '@ptsecurity/mosaic';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SelectSearchComponent } from './select/select-search.component/select-search.component';
+import {ReactiveFormsModule} from "@angular/forms";
+import {MultipleSelectSearchComponent} from "./select/multiple-select-search.component/multiple-select-search.component";
 
 
 storiesOf('Form Controls|Select', module)
@@ -44,6 +47,41 @@ storiesOf('Form Controls|Select', module)
             imports: [McSelectModule, BrowserAnimationsModule]
         }
     }))
+    .add('Filtering', () => ({
+        component: SelectSearchComponent,
+        props: {
+            singleSelectedWithSearch: 'Moscow'
+        },
+        moduleMetadata: {
+            imports: [
+                McSelectModule,
+                BrowserAnimationsModule,
+                McButtonModule,
+                McInputModule,
+                McFormFieldModule,
+                McIconModule,
+                ReactiveFormsModule
+            ]
+        }
+    }))
+    .add('Multiple filtering', () => ({
+        component: MultipleSelectSearchComponent,
+        props: {
+            multipleSelectedWithSearch: ['Dzerzhinsk', 'Pskov']
+        },
+        moduleMetadata: {
+            imports: [
+                McSelectModule,
+                BrowserAnimationsModule,
+                McButtonModule,
+                McInputModule,
+                McFormFieldModule,
+                McIconModule,
+                ReactiveFormsModule
+            ]
+        }
+    }))
+
     .add('Multiselect', () => ({
         /* tslint:disable:no-trailing-whitespace */
         template: `
