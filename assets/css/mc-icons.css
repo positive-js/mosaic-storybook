@@ -6,8 +6,57 @@ body {
 .icons__item,
 .icons__item i {
 	-webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
+  	backface-visibility: hidden;
 }
+
+.mc {
+    color: #999;
+}
+
+.mc.mc-icon-rotate_90 {
+    transform: rotate(90deg);
+}
+
+.mc.mc-icon-rotate_180 {
+    transform: rotate(180deg);
+}
+
+.mc.mc-icon-rotate_270 {
+    transform: rotate(270deg);
+}
+
+.mc-spin {
+    -webkit-animation: mc-spin 2s infinite linear;
+    animation: mc-spin 2s infinite linear;
+}
+
+.mc-pulse {
+    -webkit-animation: mc-spin 1s infinite steps(8);
+    animation: mc-spin 1s infinite steps(8);
+}
+
+@-webkit-keyframes mc-spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(359deg);
+        transform: rotate(359deg);
+    }
+}
+
+@keyframes mc-spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(359deg);
+        transform: rotate(359deg);
+    }
+}
+
 
 
 
@@ -36,6 +85,7 @@ body {
 	text-rendering:auto;
 	-webkit-font-smoothing:antialiased;
 	-moz-osx-font-smoothing:grayscale;
+	transform:rotate(0.001deg);
 }
 
 
@@ -211,6 +261,19 @@ font-size: 16px;
 
 
 
+.mc-bell_16 {
+font-size: 16px;
+
+	
+		}
+		.mc-bell_16:before {
+			content:"\f12a";
+		
+	
+}
+
+
+
 .mc-bell_32 {
 font-size: 32px;
 
@@ -218,6 +281,19 @@ font-size: 32px;
 		}
 		.mc-bell_32:before {
 			content:"\f125";
+		
+	
+}
+
+
+
+.mc-bell-off_16 {
+font-size: 16px;
+
+	
+		}
+		.mc-bell-off_16:before {
+			content:"\f12b";
 		
 	
 }
@@ -348,6 +424,19 @@ font-size: 16px;
 		}
 		.mc-download_16:before {
 			content:"\f119";
+		
+	
+}
+
+
+
+.mc-download_32 {
+font-size: 32px;
+
+	
+		}
+		.mc-download_32:before {
+			content:"\f12c";
 		
 	
 }
@@ -536,6 +625,32 @@ font-size: 16px;
 
 
 
+.mc-triangle-left_16 {
+font-size: 16px;
+
+	
+		}
+		.mc-triangle-left_16:before {
+			content:"\f12d";
+		
+	
+}
+
+
+
+.mc-triangle-right_16 {
+font-size: 16px;
+
+	
+		}
+		.mc-triangle-right_16:before {
+			content:"\f12e";
+		
+	
+}
+
+
+
 .mc-triangle-up_16 {
 font-size: 16px;
 
@@ -549,6 +664,19 @@ font-size: 16px;
 
 
 
+.mc-upload-to-cloud_16 {
+font-size: 16px;
+
+	
+		}
+		.mc-upload-to-cloud_16:before {
+			content:"\f12f";
+		
+	
+}
+
+
+
 .mc-upload-to-cloud_24 {
 font-size: 24px;
 
@@ -556,6 +684,19 @@ font-size: 24px;
 		}
 		.mc-upload-to-cloud_24:before {
 			content:"\f114";
+		
+	
+}
+
+
+
+.mc-upload-to-cloud_32 {
+font-size: 32px;
+
+	
+		}
+		.mc-upload-to-cloud_32:before {
+			content:"\f130";
 		
 	
 }
