@@ -3,9 +3,8 @@ import { McModalService } from '@ptsecurity/mosaic';
 
 
 @Component({
-    selector: 'app',
-    templateUrl: './modal.component.html',
-    encapsulation: ViewEncapsulation.None
+    selector: 'modal-app',
+    templateUrl: './modal.component.html'
 })
 export class ModalDemoComponent {
 

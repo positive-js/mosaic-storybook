@@ -16,6 +16,7 @@ storiesOf('Data List|Tree', module)
             onSelectionChange: action('selectionChange')
         },
         moduleMetadata: {
+            declarations: [TreeComponent],
             imports: [McTreeModule, McIconModule, CdkTreeModule]
         }
     }));

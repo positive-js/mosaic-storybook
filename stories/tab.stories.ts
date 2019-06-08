@@ -4,6 +4,7 @@ import {
     McNavbarModule,
     McTabsModule
 } from '@ptsecurity/mosaic';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 storiesOf('Layout|Tabs', module)
@@ -68,7 +69,7 @@ storiesOf('Layout|Tabs', module)
 
         },
         moduleMetadata: {
-            imports: [McTabsModule]
+            imports: [BrowserAnimationsModule, McTabsModule]
         }
     }))
 
@@ -137,7 +138,7 @@ storiesOf('Layout|Tabs', module)
             }
         },
         moduleMetadata: {
-            imports: [McTabsModule, McNavbarModule]
+            imports: [BrowserAnimationsModule, McTabsModule, McNavbarModule]
         }
     }))
 
@@ -198,6 +199,6 @@ storiesOf('Layout|Tabs', module)
             activeLink: 1,
         },
         moduleMetadata: {
-            imports: [McTabsModule, McNavbarModule]
+            imports: [BrowserAnimationsModule, McTabsModule, McNavbarModule]
         }
     }));

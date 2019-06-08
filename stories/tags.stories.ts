@@ -1,14 +1,12 @@
 import { storiesOf } from '@storybook/angular';
 import {
     McAutocompleteModule,
-    McAutocompleteSelectedEvent,
     McFormFieldModule,
     McIconModule,
     McTagInputEvent,
     McTagsModule
 } from '@ptsecurity/mosaic';
 import { ReactiveFormsModule } from '@angular/forms';
-import { merge, map } from 'rxjs';
 import {TagsAutocompleteComponent} from "./tags-autocomplete/tags-autocomplete.component";
 
 
@@ -177,6 +175,7 @@ storiesOf('Indicators|Tags', module)
         props: {
         },
         moduleMetadata: {
+            declarations: [TagsAutocompleteComponent],
             imports: [
                 McFormFieldModule,
                 ReactiveFormsModule,

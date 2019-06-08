@@ -24,6 +24,7 @@ storiesOf('Data List|Tree Select', module)
             disabledItemName: text('disabled item name', 'Downloads')
         },
         moduleMetadata: {
+            declarations: [TreeSelectComponent],
             imports: [
                 BrowserAnimationsModule,
                 McTreeModule,

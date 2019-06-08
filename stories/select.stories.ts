@@ -53,6 +53,7 @@ storiesOf('Form Controls|Select', module)
             singleSelectedWithSearch: 'Moscow'
         },
         moduleMetadata: {
+            declarations: [SelectSearchComponent],
             imports: [
                 McSelectModule,
                 BrowserAnimationsModule,
@@ -70,6 +71,7 @@ storiesOf('Form Controls|Select', module)
             multipleSelectedWithSearch: ['Dzerzhinsk', 'Pskov']
         },
         moduleMetadata: {
+            declarations: [MultipleSelectSearchComponent],
             imports: [
                 McSelectModule,
                 BrowserAnimationsModule,

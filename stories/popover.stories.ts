@@ -867,6 +867,7 @@ storiesOf('Popups & Modals|Popover', module)
     .add('Popover Manual Trigger', () => ({
         component: PopoverManualTriggerStoriesComponent,
         moduleMetadata: {
+            declarations: [PopoverManualTriggerStoriesComponent],
             imports: [
                 BrowserAnimationsModule,
                 McPopoverModule,
@@ -878,6 +879,7 @@ storiesOf('Popups & Modals|Popover', module)
     .add('Popover Default Trigger', () => ({
         component: PopoverDefaultTriggerStoriesComponent,
         moduleMetadata: {
+            declarations: [PopoverDefaultTriggerStoriesComponent],
             imports: [
                 BrowserAnimationsModule,
                 McPopoverModule,
@@ -889,6 +891,7 @@ storiesOf('Popups & Modals|Popover', module)
     .add('Popover Focus Trigger', () => ({
         component: PopoverFocusTriggerStoriesComponent,
         moduleMetadata: {
+            declarations: [PopoverFocusTriggerStoriesComponent],
             imports: [
                 BrowserAnimationsModule,
                 McPopoverModule,

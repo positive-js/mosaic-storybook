@@ -219,6 +219,7 @@ storiesOf('Indicators|Alerts', module)
         component: DemoComponent,
         props: {},
         moduleMetadata: {
+            declarations: [DemoComponent],
             imports: [
                 BrowserAnimationsModule,
                 McIconModule,
