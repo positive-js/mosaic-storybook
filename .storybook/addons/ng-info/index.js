@@ -47,7 +47,7 @@ function addAnyInfo(storyFn, context, infoOptions) {
 
     let result = intro
         .replace('<!-- STORY -->', context.story)
-        .replace('<!-- MD -->', infoOptions.markdown);
+        .replace('<!-- MD -->', infoOptions.markdown.default);
 
     try {
         result = renderMarkdown(result, {

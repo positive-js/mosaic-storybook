@@ -1,15 +1,18 @@
-import { Component, ViewEncapsulation } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { storiesOf } from '@storybook/angular';
-import { boolean, text } from '@storybook/addon-knobs';
 
 import { withAnyInfo } from '../.storybook/addons/ng-info';
 
-import { McMomentDateModule, MomentDateAdapter } from '@ptsecurity/mosaic-moment-adapter';
-import { McInputModule, McIconModule, McFormFieldModule, McDatepickerModule } from '@ptsecurity/mosaic';
+import { McMomentDateModule } from '@ptsecurity/mosaic-moment-adapter';
+import { McInputModule, McIconModule, McFormFieldModule, McDatepickerModule, McRadioModule } from '@ptsecurity/mosaic';
 
-import { DateAdapter, MC_DATE_LOCALE } from '@ptsecurity/cdk/datetime';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MultiLangDateComponent } from './datepicker/multi-lang-date.component';
+import { MyDatepickerComponent } from './datepicker/app-datepicker.component';
+
+import * as multiLangDate from './datepicker/multi-lang-date.md';
+import * as appDatepicker from './datepicker/app-datepicker.md';
+
 
 
 storiesOf('Form Controls|Datepicker', module)
@@ -17,12 +20,12 @@ storiesOf('Form Controls|Datepicker', module)
 
     .addParameters({
         anyinfo: {
-
+            markdown: appDatepicker
         }
     })
     .add('Datepicker', () => ({
         template: `
-            <my-datepicker></my-datepicker>
+            <app-datepicker></app-datepicker>
         `,
         props: {
         },
@@ -38,31 +41,26 @@ storiesOf('Form Controls|Datepicker', module)
                 McIconModule
             ]
         }
-    }));
+    }))
 
-@Component({
-    selector: 'my-datepicker',
-    template: `
-        <div class="example-viewport">
-            <mc-form-field>
-                <input mcInput [(ngModel)]="date" [mcDatepicker]="myDatepicker" />
-                <mc-datepicker-toggle tabindex="7" mcSuffix [for]="myDatepicker"></mc-datepicker-toggle>
-                <mc-datepicker #myDatepicker></mc-datepicker>
-            </mc-form-field>
-        </div>
-    `,
-    styles: [`
-        .example-viewport {
-            width: 400px;
-            margin: 8px;
+    .addParameters({
+        anyinfo: {
+            markdown: multiLangDate
         }
-    `],
-    encapsulation: ViewEncapsulation.None,
-    providers: [
-        {provide: MC_DATE_LOCALE, useValue: 'ru'},
-        {provide: DateAdapter, useClass: MomentDateAdapter, deps: [MC_DATE_LOCALE]}
-    ]
-})
-export class MyDatepickerComponent {
-    date;
-}
+    })
+    .add('MultiLang', () => ({
+        template: `<app-multi-lang-date></app-multi-lang-date>`,
+        moduleMetadata: {
+            declarations: [MultiLangDateComponent],
+            imports: [
+                BrowserAnimationsModule,
+                FormsModule,
+                McFormFieldModule,
+                McRadioModule,
+                McDatepickerModule,
+                McMomentDateModule,
+                McInputModule,
+                McIconModule
+            ]
+        }
+    }));
