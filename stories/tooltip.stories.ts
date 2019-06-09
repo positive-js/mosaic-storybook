@@ -250,6 +250,7 @@ storiesOf('Popups & Modals|Tooltip', module)
     .add('Tooltip on focus', () => ({
         component: TooltipDemoComponentFocus,
         moduleMetadata: {
+            declarations: [TooltipDemoComponentFocus],
             imports: [
                 McToolTipModule,
                 McButtonModule,
@@ -260,6 +261,7 @@ storiesOf('Popups & Modals|Tooltip', module)
     .add('Tooltip on hover', () => ({
         component: TooltipDemoComponentHover,
         moduleMetadata: {
+            declarations: [TooltipDemoComponentHover],
             imports: [
                 McToolTipModule,
                 McButtonModule,
@@ -274,6 +276,7 @@ storiesOf('Popups & Modals|Tooltip', module)
     .add('Tooltip with manual trigger', () => ({
         component: TooltipDemoComponentManualTrigger,
         moduleMetadata: {
+            declarations: [TooltipDemoComponentManualTrigger],
             imports: [
                 McButtonModule,
                 McToolTipModule,

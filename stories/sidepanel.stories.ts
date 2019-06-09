@@ -13,7 +13,7 @@ storiesOf('Popups & Modals|Sidepanel', module)
         component: SidepanelDemoComponent,
         moduleMetadata: {
             imports: [BrowserAnimationsModule, McSidepanelModule, McButtonModule, McIconModule],
-            declarations: [ExampleSidepanelComponent],
+            declarations: [SidepanelDemoComponent, ExampleSidepanelComponent],
             entryComponents: [ExampleSidepanelComponent]
         },
         props: {
