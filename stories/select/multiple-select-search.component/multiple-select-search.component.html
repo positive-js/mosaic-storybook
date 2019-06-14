@@ -8,7 +8,6 @@
                 <mc-cleaner></mc-cleaner>
             </mc-form-field>
 
-            <mc-option value="StickedOption">Sticked Option</mc-option>
             <mc-option *ngFor="let option of filteredMultipleOptions | async" [value]="option">{{ option }}</mc-option>
         </mc-select>
     </mc-form-field>
