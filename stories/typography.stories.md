@@ -60,6 +60,6 @@ $typography: mc-typography-config(
 After override we need to apply changed config to all elements
 
 ```scss
-@include mc-core($typography);
+@include mosaic-typography($typography);
 ```
 
