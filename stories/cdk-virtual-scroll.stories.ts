@@ -2,8 +2,8 @@ import { ChangeDetectionStrategy, Component, ViewEncapsulation } from '@angular/
 import { storiesOf } from '@storybook/angular';
 import { BehaviorSubject, Observable, Subscription } from 'rxjs';
 
-import { FixedSizeVirtualScrollStrategy, ScrollingModule, VIRTUAL_SCROLL_STRATEGY } from '@ptsecurity/cdk/scrolling';
-import { DataSource, ICollectionViewer } from '@ptsecurity/cdk/collections';
+import { FixedSizeVirtualScrollStrategy, ScrollingModule, VIRTUAL_SCROLL_STRATEGY } from '@angular/cdk/scrolling';
+import { DataSource, CollectionViewer } from '@angular/cdk/collections';
 
 import { withAnyInfo } from '../.storybook/addons/ng-info';
 import * as markdown from './cdk-virtual-scroll.stories.md';
@@ -122,7 +122,7 @@ export class MyDataSource extends DataSource<string | undefined> {
     private dataStream = new BehaviorSubject<(string | undefined)[]>(this.cachedData);
     private subscription = new Subscription();
 
-    connect(collectionViewer: ICollectionViewer): Observable<(string | undefined)[]> {
+    connect(collectionViewer: CollectionViewer): Observable<(string | undefined)[]> {
         this.subscription.add(collectionViewer.viewChange.subscribe((range) => {
             const startPage = this.getPageForIndex(range.start);
             const endPage = this.getPageForIndex(range.end - 1);
