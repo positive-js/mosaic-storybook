@@ -112,9 +112,9 @@
     tslib "^1.9.0"
 
 "@angular/cdk@^8.0.2":
-  version "8.0.2"
-  resolved "https://registry.yarnpkg.com/@angular/cdk/-/cdk-8.0.2.tgz#599b7fd06caed8cbea41f8f7874ddcea5dfc99ce"
-  integrity sha512-Tv9M0vuTp7Ogk7mRiEpzBG9x5289FXe+WH0VKqN4zTzF/taTgGEuJBLDcFrwQMW0mFpGP7acVOiopgH+nClytg==
+  version "8.1.0"
+  resolved "https://registry.yarnpkg.com/@angular/cdk/-/cdk-8.1.0.tgz#6eda3e3ecfe157e7c7790b6d1c7e2d7e9f59dd1e"
+  integrity sha512-CKZTtLWNSSM+DmZS5IHhhh+Tb3+N3/WnINq55yQrupk0hIsfyssMTBp6GHogE9btfo9+73B5fSK+VNj6VuD/Qw==
   dependencies:
     tslib "^1.7.1"
   optionalDependencies:
@@ -1078,8 +1078,8 @@
     esquery "^1.0.1"
 
 "@ptsecurity/cdk@github:positive-js/cdk-builds":
-  version "8.0.0-beta.6-01b9e7b"
-  resolved "https://codeload.github.com/positive-js/cdk-builds/tar.gz/cab906b038892d2975403b4fa44e684c3d2293ae"
+  version "8.0.0-beta.6-4f87ccd"
+  resolved "https://codeload.github.com/positive-js/cdk-builds/tar.gz/1bafb2db09ec9d4bf10eb2d724f8bb6f4077ea1e"
   dependencies:
     tslib "^1.7.1"
 
@@ -1089,14 +1089,14 @@
   integrity sha512-LBVBtN2TMXVkfvAg8pBhnhZ+mmI6vbtWnAccse7v/nURJ0RCYOkK4wkQ9RkY4j83AMG+CL2xLbd1Bq/HNFpQOA==
 
 "@ptsecurity/mosaic-moment-adapter@github:positive-js/mosaic-moment-adapter-builds":
-  version "8.0.0-beta.6-01b9e7b"
-  resolved "https://codeload.github.com/positive-js/mosaic-moment-adapter-builds/tar.gz/c1fbae269a4590ee8578c701727d1486a090163f"
+  version "8.0.0-beta.6-4f87ccd"
+  resolved "https://codeload.github.com/positive-js/mosaic-moment-adapter-builds/tar.gz/3d511c98e7b28dd43c84d46d3d794b1bddf64591"
   dependencies:
     tslib "^1.7.1"
 
 "@ptsecurity/mosaic@github:positive-js/mosaic-builds":
-  version "8.0.0-beta.6-01b9e7b"
-  resolved "https://codeload.github.com/positive-js/mosaic-builds/tar.gz/b5457677f03824a8e5cdfaf58f76fca178700f6a"
+  version "8.0.0-beta.6-4f87ccd"
+  resolved "https://codeload.github.com/positive-js/mosaic-builds/tar.gz/f4fb49c0234ac2647931506c31eae9401ca148b2"
   dependencies:
     tslib "^1.7.1"
 
