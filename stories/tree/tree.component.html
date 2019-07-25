@@ -1,17 +1,18 @@
 <mc-tree-selection
+    [(ngModel)]="selected"
     [dataSource]="dataSource"
     [treeControl]="treeControl"
     (navigationChange)="onNavigationChange($event)"
     (selectionChange)="onSelectionChange($event)">
 
-    <mc-tree-option *mcTreeNodeDef="let node" mcTreeNodePadding>
+    <mc-tree-option *mcTreeNodeDef="let node" mcTreeNodePadding [value]="node.name">
         {{ node.name }}
     </mc-tree-option>
 
-    <mc-tree-option *mcTreeNodeDef="let node; when: hasChild" mcTreeNodePadding>
+    <mc-tree-option *mcTreeNodeDef="let node; when: hasChild" [value]="node.name" mcTreeNodePadding>
         <i mc-icon="mc-angle-down-S_16" [style.transform]="treeControl.isExpanded(node) ? '' : 'rotate(-90deg)'" cdkTreeNodeToggle></i>
         {{ node.name }} : {{ node.type }}
     </mc-tree-option>
 </mc-tree-selection>
 
-<p>multipleSelected: {{ multipleSelected }}</p>
+<p>selected: {{ selected }}</p>

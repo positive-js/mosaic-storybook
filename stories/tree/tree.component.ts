@@ -115,6 +115,8 @@ export class TreeComponent {
     dataSource: McTreeFlatDataSource<FileNode, FileFlatNode>;
     treeFlattener: McTreeFlattener<FileNode, FileFlatNode>;
 
+    selected = 'Downloads';
+
     constructor(database: FileDatabase) {
         this.treeFlattener = new McTreeFlattener(
             this.transformer, this._getLevel, this._isExpandable, this._getChildren
