@@ -13,7 +13,12 @@ import {
 } from '@ptsecurity/mosaic';
 import { McMomentDateModule } from '@ptsecurity/mosaic-moment-adapter';
 import { FormsModule } from '@angular/forms';
+import * as _moment from 'moment';
+// @ts-ignore
+// tslint:disable-next-line:no-duplicate-imports
+import { default as _rollupMoment, Moment } from 'moment';
 
+const moment = _rollupMoment || _moment;
 
 let newDefaultTime = new Date();
 let timeFormatOptions = {
@@ -21,9 +26,9 @@ let timeFormatOptions = {
     'HH:mm': 'HH:mm'
 };
 
-function myDateKnob(name, defaultValue) {
+function myDateKnob(name, defaultValue): Moment {
     const stringTimestamp = date(name, defaultValue);
-    return new Date(stringTimestamp)
+    return moment(stringTimestamp);
 }
 
 storiesOf('Form Controls|Timepicker', module)
@@ -40,7 +45,7 @@ storiesOf('Form Controls|Timepicker', module)
             </mc-form-field>            
         </div>
         <section [ngSwitch]="value !== null">
-            <span *ngSwitchCase="true">Result: {{value.toLocaleTimeString()}}</span>
+            <span *ngSwitchCase="true">Result: {{value.format('H:mm:ss')}}</span>
             <span *ngSwitchCase="false">Null result</span>
         </section>`,
         props: {
@@ -73,7 +78,7 @@ storiesOf('Form Controls|Timepicker', module)
             </mc-form-field>            
         </div>
         <section [ngSwitch]="value !== null">
-            <span *ngSwitchCase="true">Result: {{value.toLocaleTimeString()}}</span>
+            <span *ngSwitchCase="true">Result: {{value.format('H:mm:ss')}}</span>
             <span *ngSwitchCase="false">Null result</span>
         </section>`,
         props: {
