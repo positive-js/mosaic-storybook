@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { MomentDateAdapter } from '@ptsecurity/mosaic-moment-adapter';
 import { DateAdapter, MC_DATE_LOCALE } from '@ptsecurity/cdk/datetime';
+import { McRadioChange } from '@ptsecurity/mosaic';
 
 
 export enum Languages {
@@ -15,10 +16,11 @@ export enum Languages {
     selector: 'app-multi-lang-date',
     template: `
         <div class="example-viewport layout-column">
-            <mc-radio-group class="example-radio-group">
+            <mc-radio-group
+                    class="example-radio-group"
+                    (change)="useLanguage($event)">
                 <mc-radio-button *ngFor="let language of languageList" 
                                  [value]="language"
-                                 (click)="useLanguage(language)"
                                  [checked]="language === 'en'">
                     {{ language }}
                 </mc-radio-button>
@@ -61,10 +63,10 @@ export class MultiLangDateComponent implements OnInit {
 
     ngOnInit() {
         this.languageList = Object.keys(Languages).filter(String);
-        this.useLanguage(this.languageList[0]);
+        this.dateAdapter.setLocale(this.languageList[0]);
     }
 
-    useLanguage(language: string): void {
-        this.dateAdapter.setLocale(language);
+    useLanguage($event: McRadioChange): void {
+        this.dateAdapter.setLocale($event.value);
     }
 }
