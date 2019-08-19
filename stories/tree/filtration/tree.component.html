@@ -1,0 +1,36 @@
+<mc-form-field>
+    <input type="text"
+           placeholder="tree filter"
+           (ngModelChange)="onFilterChange($event)"
+           mcInput [(ngModel)]="filterValue">
+</mc-form-field>
+
+<br><br>
+
+<mc-tree-selection
+    [(ngModel)]="selected"
+    [dataSource]="dataSource"
+    [treeControl]="treeControl"
+    (navigationChange)="onNavigationChange($event)"
+    (selectionChange)="onSelectionChange($event)">
+
+    <mc-tree-option
+        *mcTreeNodeDef="let node"
+        [value]="node.name"
+        mcTreeNodePadding>
+        <span [innerHTML]="node.name | mcHighlight : treeControl.filterValue.value"></span>
+    </mc-tree-option>
+
+    <mc-tree-option
+        *mcTreeNodeDef="let node; when: hasChild"
+        [value]="node.name"
+        mcTreeNodePadding
+        [disabled]="node.name === 'Downloads'">
+
+        <mc-tree-node-toggle [node]="node"></mc-tree-node-toggle>
+
+        <span [innerHTML]="(node.name + ':') | mcHighlight : treeControl.filterValue.value"></span>
+    </mc-tree-option>
+</mc-tree-selection>
+
+<p>selected: {{ selected }}</p>
