@@ -9,6 +9,11 @@ storiesOf('Layout|Splitter', module)
                 mc-splitter {
                     border: 1px solid black;
                     height: 100px;
+                    margin: 2px;
+                }
+                
+                div[mc-splitter-area] {
+                    background: #f0f0f0
                 }
             </style>
             
@@ -34,10 +39,15 @@ storiesOf('Layout|Splitter', module)
                     display: flex;
                     border: 1px solid black;
                     height: 100px;
+                    margin: 2px;
                 }
 
                 .mc-splitter-area_fixed-width {
                     min-width: 200px;
+                }
+                                
+                div[mc-splitter-area] {
+                    background: #f0f0f0
                 }
             </style>
             
@@ -61,10 +71,15 @@ storiesOf('Layout|Splitter', module)
                     display: flex;
                     border: 1px solid black;
                     height: 400px;
+                    margin: 2px;
                 }
 
                 .mc-splitter-area_fixed-height {
                     min-height: 100px;
+                }
+                
+                div[mc-splitter-area] {
+                    background: #f0f0f0
                 }
             </style>
             
@@ -87,10 +102,23 @@ storiesOf('Layout|Splitter', module)
                 mc-splitter.with-border {
                     border: 1px solid black;
                     height: 300px;
+                    margin: 2px;
                 }
                 
                 mc-splitter.without-border {
                     height: 300px;
+                }
+                
+                .with-border > div[mc-splitter-area] {
+                    background: #f0f0f0
+                }
+                                
+                .without-border > div[mc-splitter-area] {
+                    background: #b3b3b3;
+                }
+                                
+                .nested-splitter > div[mc-splitter-area] {
+                    background: #9f9f9f;
                 }
             </style>
             
@@ -102,7 +130,7 @@ storiesOf('Layout|Splitter', module)
                     <mc-splitter class="without-border flex" [direction]="'vertical'">
                         <div mc-splitter-area>top</div>
                         <div mc-splitter-area class="layout-column flex">
-                            <mc-splitter class="flex">
+                            <mc-splitter class="flex nested-splitter">
                                 <div mc-splitter-area>center-left</div>
                                 <div mc-splitter-area class="flex">center</div>
                                 <div mc-splitter-area>center-right</div>
