@@ -102,7 +102,7 @@ export class TreeComponent {
             this.transformer, this.getLevel, this.isExpandable, this.getChildren
         );
 
-        this.treeControl = new FlatTreeControl<FileFlatNode>(this.getLevel, this.isExpandable);
+        this.treeControl = new FlatTreeControl<FileFlatNode>(this.getLevel, this.isExpandable, this.getValue, this.getViewValue);
         this.dataSource = new McTreeFlatDataSource(this.treeControl, this.treeFlattener);
 
         this.dataSource.data = buildFileTree(DATA_OBJECT, 0);
@@ -138,15 +138,23 @@ export class TreeComponent {
         console.log('onSelectionChange');
     }
 
-    private getLevel(node: FileFlatNode) {
+    private getLevel = (node: FileFlatNode) => {
         return node.level;
     }
 
-    private isExpandable(node: FileFlatNode) {
+    private isExpandable = (node: FileFlatNode) => {
         return node.expandable;
     }
 
     private getChildren = (node: FileNode): FileNode[] => {
         return node.children;
+    }
+
+    private getValue = (node: FileNode): string => {
+        return node.name;
+    }
+
+    private getViewValue = (node: FileNode): string => {
+        return node.name;
     }
 }

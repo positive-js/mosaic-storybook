@@ -5,13 +5,13 @@
     (navigationChange)="onNavigationChange($event)"
     (selectionChange)="onSelectionChange($event)">
 
-    <mc-tree-option *mcTreeNodeDef="let node" mcTreeNodePadding [value]="node.name">
-        {{ node.name }}
+    <mc-tree-option *mcTreeNodeDef="let node" mcTreeNodePadding>
+        {{ treeControl.getViewValue(node) }}
     </mc-tree-option>
 
-    <mc-tree-option *mcTreeNodeDef="let node; when: hasChild" [value]="node.name" mcTreeNodePadding>
+    <mc-tree-option *mcTreeNodeDef="let node; when: hasChild" mcTreeNodePadding>
         <i mc-icon="mc-angle-down-S_16" [style.transform]="treeControl.isExpanded(node) ? '' : 'rotate(-90deg)'" cdkTreeNodeToggle></i>
-        {{ node.name }} : {{ node.type }}
+        {{ treeControl.getViewValue(node) }}
     </mc-tree-option>
 </mc-tree-selection>
 

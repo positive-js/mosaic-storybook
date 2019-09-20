@@ -16,20 +16,18 @@
 
     <mc-tree-option
         *mcTreeNodeDef="let node"
-        [value]="node.name"
         mcTreeNodePadding>
-        <span [innerHTML]="node.name | mcHighlight : treeControl.filterValue.value"></span>
+        <span [innerHTML]="treeControl.getViewValue(node) | mcHighlight : treeControl.filterValue.value"></span>
     </mc-tree-option>
 
     <mc-tree-option
         *mcTreeNodeDef="let node; when: hasChild"
-        [value]="node.name"
         mcTreeNodePadding
         [disabled]="node.name === 'Downloads'">
 
         <mc-tree-node-toggle [node]="node"></mc-tree-node-toggle>
 
-        <span [innerHTML]="(node.name + ':') | mcHighlight : treeControl.filterValue.value"></span>
+        <span [innerHTML]="treeControl.getViewValue(node) | mcHighlight : treeControl.filterValue.value"></span>
     </mc-tree-option>
 </mc-tree-selection>
 
