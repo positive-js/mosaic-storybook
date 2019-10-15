@@ -15,7 +15,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
-storiesOf('Data List|Tree Select', module)
+storiesOf('Form Controls|Tree Select', module)
     .addDecorator(withKnobs)
     .add('Tree Select', () => ({
         component: TreeSelectComponent,
