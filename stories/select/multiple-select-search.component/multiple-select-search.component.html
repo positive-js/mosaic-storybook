@@ -8,6 +8,8 @@
                 <mc-cleaner></mc-cleaner>
             </mc-form-field>
 
+            <div mc-select-search-empty-result>Ничего не найдено</div>
+
             <mc-option *ngFor="let option of filteredMultipleOptions | async" [value]="option">{{ option }}</mc-option>
         </mc-select>
     </mc-form-field>
